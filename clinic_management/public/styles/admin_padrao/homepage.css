@@ -1,0 +1,127 @@
+@import "../global/geral.css";
+@import "../autentication/form.css";
+@import "../global/modal.css";
+@import "./tables.css";
+
+header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--cBase01);
+  margin-top: 32px;
+  border-radius: 8px;
+}
+
+.header-menu-admin {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.exit-session-btn {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+  margin-bottom: 80px;
+}
+
+.form {
+  width: 100%;
+}
+
+.container {
+  margin-top: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.wellcome-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.wellcome-title::after {
+  content: "";
+  width: 160px;
+  height: 4px;
+  background-color: var(--cBase02);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+
+.create-btn {
+  background-color: var(--cBase01);
+  padding: 8px 48px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  transition: 0.2s;
+}
+
+.create-btn:hover {
+  background-color: #7f16ab;
+}
+
+table {
+  display: none;
+}
+
+table.active {
+  display: table;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.registro {
+  height: 40px;
+}
+
+.registro:nth-child(even) {
+  background-color: var(--c01);
+}
+
+.registro td {
+  padding-left: 8px;
+}
+
+th {
+  padding: 8px;
+  text-align: left;
+  background-color: var(--cBase01);
+  font-family: 'roboto';
+  font-weight: lighter;
+}
+
+.first {
+  border-radius: 8px 0 0 0;
+}
+
+.last {
+  border-radius: 0 8px 0 0;
+}
+
+.sign-up-btn-modal {
+  padding: 16px 10px;
+  width: 100%;
+  margin-top: 32px;
+  background-color: var(--cBase02);
+  border-radius: 8px;
+  font-size: 1.125rem;
+  line-height: 1;
+  transition: 0.2s ease;
+}

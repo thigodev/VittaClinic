@@ -1,0 +1,64 @@
+.sign-up-title,
+.sign-in-title {
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+.sign-up-title::after,
+.sign-in-title:after {
+  content: "";
+  width: 160px;
+  height: 4px;
+  background-color: var(--cBase01);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+
+form {
+  margin-top: 32px;
+  width: 360px;
+}
+
+label {
+  display: block;
+}
+
+input,
+#user_type,
+#paciente_sexo {
+  margin-top: 4px;
+  width: 100%;
+  padding: 16px 10px;
+  background-color: var(--c01);
+  border-radius: 8px;
+  border: 1px solid #E7E6EB;
+}
+
+.input-container {
+  padding: 16px 0px;
+}
+
+.sign-up-btn,
+.sign-in-btn {
+  padding: 16px 10px;
+  width: 100%;
+  margin-top: 32px;
+  background-color: var(--cBase01);
+  border-radius: 8px;
+  font-size: 1.125rem;
+  line-height: 1;
+  transition: 0.2s ease;
+}
+
+.sign-up-btn:hover,
+.sign-in-btn:hover {
+  background-color: #7f16ab;
+}
+
+@media(max-width: 400px) {
+  form {
+    width: 100%;
+  }
+}

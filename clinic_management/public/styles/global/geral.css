@@ -1,0 +1,166 @@
+:root {
+  --cBase01: #7712A1;
+  --cBase02: #B6ED1F;
+  --cBase03: #330047;
+  --c11: #111111;
+  --c10: #2E2E2E;
+  --c05: #B2B2B2;
+  --c01: #F7F7F7;
+}
+
+/* UTILITARIO */
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.c11 {
+  color: var(--c11);
+}
+
+.c10 {
+  color: var(--c10);
+}
+
+.c05 {
+  color: var(--c05);
+}
+
+.c01 {
+  color: var(--c01);
+}
+
+.cBase01 {
+  color: var(--cBase01);
+}
+
+.cBase02 {
+  color: var(--cBase02);
+}
+
+/* UTILITARIO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.detail {
+  color: var(--cBase01);
+}
+
+.detail-green {
+  color: var(--cBase02);
+}
+
+.perfil-title {
+  text-align: center;
+}
+
+.perfil-title::after {
+  content: "";
+  width: 160px;
+  height: 4px;
+  background-color: var(--cBase02);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+
+.info-container {
+  margin-top: 32px;
+  width: 400px;
+}
+
+.info-container ul li {
+  margin: 16px 0px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--c01);
+  transition: 0.2s ease;
+}
+
+.info-container ul li:hover {
+  background-color: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+[data-anima="show-left"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .5s;
+}
+
+[data-anima="show-right"] {
+  opacity: 0;
+  transform: translate3d(30px, 0, 0);
+  transition: .5s;
+}
+
+[data-anima="show-up"] {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: .5s;
+}
+
+[data-anima="show-down"] {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: .5s;
+}
+
+[data-anima="show-left"].active,
+[data-anima="show-up"].active,
+[data-anima="show-down"].active,
+[data-anima="show-right"].active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,27 @@
+@import "../global/geral.css";
+@import "./form.css";
+
+header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+  }
+}
