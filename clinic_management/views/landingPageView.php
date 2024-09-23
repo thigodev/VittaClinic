@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
-  <title>Umbrella - Landing Page</title>
+  <title>Vitta Clinic</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/landing_page/lp.css">
 </head>
 
@@ -17,7 +17,7 @@
   <a href="/clinic_management/views/adminView.php">admin</a> -->
   <header id="home" class="header-bg">
     <div class="header">
-      <img class="header-logo" src="/clinic_management/public/midia//img/umbrella-logo.svg">
+      <img class="header-logo" src="/clinic_management/public/midia//img/Vitta.png">
       <a class="login-mobile poppins-semibold c01" href="#">Fazer Login</a>
       <nav>
         <ul class="header-menu" data-scroll="smooth">
@@ -32,9 +32,9 @@
   <main class="home-bg" data-anima="show-up">
     <div class="home">
       <div class="home-content">
-        <h1 class="home-title poppins-semibold c11">Inove na Gestão<br>da sua Clínica<span class="detail">.</span></h1>
-        <p class="home-text roboto-regular c10">Agende consultas, gerencie pacientes, acompanhe registros médicos e controle sua clínica de forma integrada e segura.</p>
-        <a class="home-btn poppins-semibold c01" href="/clinic_management/views/cadastroView.php">COMEÇAR AGORA</a>
+        <h1 class="home-title poppins-semibold c11">Modernize a gestão da sua clínica<span class="detail">.</span></h1>
+        <p class="home-text roboto-regular c10">Organize suas consultas, administre os pacientes, monitore prontuários médicos e gerencie sua clínica de maneira eficiente e protegida, tudo em um único sistema.</p>
+        <a class="home-btn poppins-semibold c01" href="/clinic_management/views/cadastroView.php">INICIE</a>
       </div>
       <img class="home-img" src="/clinic_management/public/midia//img/home-img.png" alt="Site Umbrella por dentro">
     </div>
@@ -43,8 +43,8 @@
   <section id="about" class="about-bg">
     <div class="about" data-anima="show-left">
       <h1 class="about-title poppins-semibold c11">Sobre Nós<span class="detail">.</span></h1>
-      <p class="about-text roboto-regular c10">Nosso objetivo é oferecer uma solução abrangente que permita aos médicos e administradores focarem no que realmente importa: o cuidado com os pacientes. Desde o agendamento de consultas até o acompanhamento do histórico médico, o Umbrella oferece ferramentas flexíveis e eficientes para otimizar todos os aspectos da operação clínica.</p>
-      <img class="about-img" src="/clinic_management/public/midia//img/about-img.svg" width="500">
+      <p class="about-text roboto-regular c10">Nosso objetivo é oferecer uma solução completa que permita a médicos e administradores focar no essencial: o cuidado aos pacientes. O Vitta disponibiliza ferramentas flexíveis e eficientes, abrangendo desde o agendamento de consultas até o acompanhamento do histórico médico, otimizando assim todos os aspectos da operação clínica.</p>
+      <img class="about-img" src="/clinic_management/public/midia//img/medicos.svg" width="500">
     </div>
   </section>
 
@@ -55,17 +55,17 @@
         <div class="item" data-anima="show-up">
           <img src="/clinic_management/public/midia//img/schedule.svg">
           <h3 class="item-title poppins-medium cBase02">Gestão de Agenda</h3>
-          <p class="item-text roboto-regular c01">Simplifique a gestão dos seus compromissos com um sistema prático de agendamento. Otimize a administração com facilidade!</p>
+          <p class="item-text roboto-regular c01">Facilite a organização dos seus compromissos com um sistema de agendamento eficiente. Torne a administração mais ágil e descomplicada!</p>
         </div>
         <div class="item" data-anima="show-down">
           <img src="/clinic_management/public/midia//img/folder.svg">
           <h3 class="item-title poppins-medium cBase02">Prontuário Eletrônico</h3>
-          <p class="item-text roboto-regular c01">Registre informações de pacientes em cada sessão e acesse os prontuários de forma conveniente, em qualquer lugar e a qualquer momento.</p>
+          <p class="item-text roboto-regular c01">Documente as informações dos pacientes em cada consulta e acesse os prontuários de maneira prática, a qualquer hora e em qualquer lugar.</p>
         </div>
         <div class="item" data-anima="show-up">
           <img src="/clinic_management/public/midia//img/people.svg">
           <h3 class="item-title poppins-medium cBase02">Gestão de Pacientes</h3>
-          <p class="item-text roboto-regular c01">Cadastre seus pacientes e tenha todos os dados essenciais na palma da mão, proporcionando uma gestão eficiente e acessível a qualquer momento.</p>
+          <p class="item-text roboto-regular c01">Registre seus pacientes e tenha acesso a todos os dados essenciais na palma da mão, garantindo uma administração eficiente e acessível sempre que necessário.</p>
         </div>
       </div>
     </div>
@@ -76,38 +76,39 @@
       <div class="accordion">
         <dt class="poppins-semibold c11">Para quem é direcionada a plataforma?</dt>
         <dd class="roboto-regular c10">
-          O sistema da Umbrella é direcionado para clínicas, médicos e pacientes que querem facilidade no agendamento e no acompanhamento de consultas.
+        O sistema da Vitta é projetado para clínicas, médicos e pacientes que buscam praticidade no agendamento e no acompanhamento de consultas. Com uma interface intuitiva, ele facilita a gestão do atendimento, tornando o processo mais ágil e eficiente.
         </dd>
       </div>
       <div class="accordion">
         <dt class="poppins-semibold c11">Como posso entrar em contato?</dt>
         <dd class="roboto-regular c10">
-          Você poed entrar em contato pelo email ou pelo telefone: <br>
-          Email: umbrella@umbrela.com <br>
+          Você pode entrar em contato pelo email ou pelo telefone: <br>
+          Email: vitta@vitta.com <br>
           Telefone: (99) 9999-9999
         </dd>
       </div>
       <div class="accordion">
         <dt class="poppins-semibold c11">É seguro?</dt>
         <dd class="roboto-regular c10">
-          Sim, os dados são armazenados de forma segura no sistema, seguindo todas as diretrizes de privacidade e segurança de dados.
+        Sim, os dados são armazenados com segurança no sistema, em conformidade com todas as diretrizes de privacidade e proteção de informações.
         </dd>
       </div>
       <div class="accordion">
         <dt class="poppins-semibold c11">Posso acessar os prontuários de qualquer lugar?</dt>
-        <dd class="roboto-regular c10">Sim, você pode acessar os prontuários de qualquer lugar, desde que tenha uma conexão à internet e acesso ao sistema.</dd>
+        <dd class="roboto-regular c10">
+Sim, é possível acessar os prontuários de qualquer lugar, desde que você tenha uma conexão à internet e acesso ao sistema.</dd>
       </div>
     </dl>
   </section>
 
   <footer class="footer-bg">
     <div class="footer">
-      <img class="logo-footer" src="/clinic_management/public/midia//img/umbrella-logo-footer.svg">
+      <img class="logo-footer" src="/clinic_management/public/midia//img/Vitta-white.png">
       <div class="contact">
         <h3 class="contact-title poppins-medium c01">Contato</h3>
         <ul data-scroll="smooth">
           <li><a class="roboto-regular c05" href="tel:+5599999999">+55 (99) 9999-9999</a></li>
-          <li><a class="roboto-regular c05" href="mailto:umbrella@umbrella.com">umbrella@umbrella.com</a></li>
+          <li><a class="roboto-regular c05" href="mailto:umbrella@umbrella.com">vitta@vitta.com</a></li>
         </ul>
       </div>
       <div class="info">
@@ -119,7 +120,7 @@
           <li><a class="roboto-regular c05" href="#faq">Perguntas Frequentes</a></li>
         </ul>
       </div>
-      <p class="copyright roboto-regular c05">Umbrella © Direitos reservados.</p>
+      <p class="copyright roboto-regular c05">Vitta © Direitos reservados.</p>
     </div>
   </footer>
 

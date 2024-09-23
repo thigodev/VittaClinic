@@ -9,7 +9,7 @@
   content: "";
   width: 160px;
   height: 4px;
-  background-color: var(--cBase01);
+  background-color: #137776;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -45,7 +45,7 @@ input,
   padding: 16px 10px;
   width: 100%;
   margin-top: 32px;
-  background-color: var(--cBase01);
+  background-color: #137776;
   border-radius: 8px;
   font-size: 1.125rem;
   line-height: 1;
@@ -54,7 +54,7 @@ input,
 
 .sign-up-btn:hover,
 .sign-in-btn:hover {
-  background-color: #7f16ab;
+  background-color: #099394;
 }
 
 @media(max-width: 400px) {

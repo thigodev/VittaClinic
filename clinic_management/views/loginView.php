@@ -12,7 +12,7 @@
   <header id="home" class="header-bg">
     <div class="header">
       <a href="/clinic_management/views/landingPageView.php">
-        <img class="header-logo" src="/clinic_management/public/midia/img/umbrella-logo.svg">
+        <img class="header-logo" src="/clinic_management/public/midia/img/Vitta.png">
       </a>
     </div>
   </header>

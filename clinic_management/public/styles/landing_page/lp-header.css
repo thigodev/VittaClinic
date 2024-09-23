@@ -46,7 +46,7 @@
 
 .nav-btn {
   padding: 8px 48px;
-  background-color: var(--cBase01);
+  background-color: #137776;
   border-radius: 8px;
   font-size: 0.875rem;
   line-height: 1.7;
@@ -55,7 +55,7 @@
 
 .nav-btn:hover,
 .home-btn:hover {
-  background-color: #7f16ab;
+  background-color: #099394;
 }
 
 @media(min-width: 800px) {
