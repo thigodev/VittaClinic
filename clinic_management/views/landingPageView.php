@@ -36,7 +36,7 @@
         <p class="home-text roboto-regular c10">Organize suas consultas, administre os pacientes, monitore prontuários médicos e gerencie sua clínica de maneira eficiente e protegida, tudo em um único sistema.</p>
         <a class="home-btn poppins-semibold c01" href="/clinic_management/views/cadastroView.php">INICIE</a>
       </div>
-      <img class="home-img" src="/clinic_management/public/midia//img/home-img.png" alt="Site Umbrella por dentro">
+      <img class="home-img" src="/clinic_management/public/midia//img/home-img.png" alt="Site Vitta por dentro">
     </div>
     <img class="home-img-mobile" src="/clinic_management/public/midia//img/home-img-mobile.svg">
   </main>

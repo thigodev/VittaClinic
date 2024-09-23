@@ -6,7 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: var(--cBase01);
+  background-color: #137776;
   margin-top: 32px;
   border-radius: 8px;
 }
@@ -33,7 +33,7 @@ header {
   content: "";
   width: 160px;
   height: 4px;
-  background-color: var(--cBase02);
+  background-color: #137776;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -41,7 +41,7 @@ header {
 }
 
 .create-btn {
-  background-color: var(--cBase01);
+  background-color: #137776;
   padding: 8px 48px;
   border-radius: 8px;
   font-size: 0.875rem;
@@ -75,7 +75,7 @@ table {
 th {
   padding: 8px;
   text-align: left;
-  background-color: var(--cBase01);
+  background-color: #137776;
   font-family: 'roboto';
   font-weight: lighter;
 }

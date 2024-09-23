@@ -37,7 +37,7 @@ $medicoName = $_SESSION['nome'];
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/umbrella-logo-footer.svg">
+    <img src="/clinic_management/public/midia/img/Vitta-white.png">
     <nav class="header-menu-admin">
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
     </nav>

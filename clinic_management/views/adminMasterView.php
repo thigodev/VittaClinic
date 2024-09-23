@@ -27,12 +27,12 @@ $admins = $adminPadrao->getAll($clinicaId);
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/umbrella-logo-footer.svg">
+    <img src="/clinic_management/public/midia/img/Vitta-white.png">
     <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
   </header>
 
   <div class="container">
-    <h1 class="wellcome-title poppins-semibold c11"><?php echo htmlspecialchars($clinicName); ?></h1>
+    <h1 class="wellcome-title poppins-semibold c11"><?php echo htmlspecialchars("Vitta") ?></h1>
 
     <button class="create-btn open-modal-btn poppins-semibold c01">Cadastrar Admin</button>
 
