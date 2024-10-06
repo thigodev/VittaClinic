@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"  # Mapeia a porta 8080 do host para a 80 do container
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: vitta1
+      MYSQL_USER: admvitta
+      MYSQL_PASSWORD: 123
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d  # Mapeia a pasta local com o SQL para o diretório de init
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db  # Nome do serviço do MySQL no Docker
+      MYSQL_ROOT_PASSWORD: root_password  # Mesmo root password do serviço MySQL
+    ports:
+      - "8081:80"  # Acessa o phpMyAdmin pela porta 8081
+    networks:
+      - app-network
+  
+
+volumes:
+  dbdata:
+
+networks:
+  app-network:
+
+

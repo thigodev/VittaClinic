@@ -7,7 +7,7 @@ class Database
   public static function getConn()
   {
     if (!isset(self::$instance)) {
-      self::$instance = new \PDO('mysql:host=localhost;dbname=umbrella1', 'root', '');
+      self::$instance = new \PDO('mysql:host=db;dbname=vitta1', 'admvitta', '123');
     }
     return self::$instance;
   }
@@ -16,10 +16,10 @@ class Database
   {
     require_once '../../HefestosORM.php';
     $config = ['driver' => 'mysql',
-              'host' => 'localhost',
-              'nome_db' => 'umbrella1',
-              'usuario' => 'root',
-              'senha' => '',
+              'host' => 'db',
+              'nome_db' => 'vitta1',
+              'usuario' => 'admvitta',
+              'senha' => '123',
             ];
 
     return HefestosORM::instancia($config);

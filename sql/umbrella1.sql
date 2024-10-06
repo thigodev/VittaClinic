@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+  -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +6,13 @@
 -- Tempo de geração: 27/08/2024 às 23:59
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
+
+
+
+CREATE DATABASE IF NOT EXISTS vitta1;
+
+
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
