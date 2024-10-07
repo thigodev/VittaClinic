@@ -7,9 +7,8 @@
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
-
 -- ENTIDADES
--- 1. administrador
+-- 1. administrador(gestor)
 -- 2. clinica
 -- 3. consulta
 -- 4. medico
