@@ -8,6 +8,20 @@
 -- Versão do PHP: 8.2.12
 
 
+-- ENTIDADES
+-- 1. administrador
+-- 2. clinica
+-- 3. consulta
+-- 4. medico
+-- 5. paciente
+
+-- RELACIONAMENTOS
+-- Admin <--> Clinica: Muitos-para-Um
+-- Medico <--> Clinica: Muitos-para-Um
+-- Paciente <--> Clinica: Muitos-para-Um
+-- Consulta <--> Paciente: Muitos-para-Um
+-- Consulta <--> Medico: Muitos-para-Um
+-- Consulta <--> Clinica: Muitos-para-Um
 
 CREATE DATABASE IF NOT EXISTS vitta1;
 
