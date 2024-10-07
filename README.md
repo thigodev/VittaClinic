@@ -1,76 +1,49 @@
-# README para Configuração do Ambiente de Desenvolvimento
+VittaClinic
 
-Este documento contém instruções para configurar o ambiente de desenvolvimento utilizando XAMPP, PHP e Git.
+VittaClinic uma aplicação desenvolvida para facilitar o gerenciamento de clínicas médicas. O objetivo principal do sistema é automatizar e simplificar o controle de operações como o agendamento de consultas, gerenciamento de prontuários, cadastro de pacientes e médicos. A plataforma busca proporcionar uma experiência eficiente tanto para os profissionais da saúde quanto para os pacientes, garantindo uma gestão integrada e centralizada de informações.
+
+## Sumário
+
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Configurando o Ambiente com Docker](#configurando-o-ambiente-com-docker)
+- [Comandos Úteis do Docker](#comandos-úteis-do-docker)
+- [Contribuições](#contribuições)
+- [Licença](#licença)
 
 ## Pré-requisitos
 
-- Um computador com Windows, macOS ou Linux.
-- Acesso à internet para baixar os softwares necessários.
+Antes de iniciar, você precisa ter o seguinte software instalado na sua máquina:
 
-## Passo 1: Instalação do XAMPP
+- [Docker](https://www.docker.com/get-started) (Docker Desktop para Windows/Mac, Docker Engine para Linux)
 
-1. **Baixar XAMPP:**
-   - Acesse o site oficial do [XAMPP](https://www.apachefriends.org/index.html).
-   - Selecione a versão apropriada para o seu sistema operacional e faça o download.
+Verifique se o Docker está corretamente instalado executando o comando:
 
-2. **Instalar XAMPP:**
-   - Execute o instalador baixado.
-   - Siga as instruções na tela, certificando-se de selecionar o Apache e o MySQL durante a instalação.
+bash
+docker --version
 
-3. **Iniciar XAMPP:**
-   - Abra o painel de controle do XAMPP.
-   - Inicie os módulos **Apache** e **MySQL** clicando nos botões "Start".
+-------------------------------------------------------------------------------------------------------------
 
-4. **Verificar a instalação:**
-   - Abra o navegador e digite `http://localhost/`. Você deve ver a página de boas-vindas do XAMPP.
+Configurando o Ambiente com Docker
+Siga os passos abaixo para configurar e executar o ambiente de desenvolvimento com Docker:
 
-## Passo 2: Configuração do PHP
+Passo 1: Construir a imagem Docker
+No diretório raiz do projeto, execute o comando abaixo para criar a imagem Docker:
 
-1. **Verificar versão do PHP:**
-   - O XAMPP já vem com PHP pré-instalado. Para verificar a versão, crie um arquivo `info.php` na pasta `htdocs` (normalmente localizada em `C:\xampp\htdocs`) com o seguinte conteúdo:
-     ```php
-     <?php phpinfo(); ?>
-     ```
-   - Acesse `http://localhost/info.php` no navegador para ver a configuração do PHP.
+bash
+docker-compose up --build
 
-2. **Modificar configurações do PHP (opcional):**
-   - Você pode editar o arquivo `php.ini`, localizado em `C:\xampp\php\php.ini`, para modificar configurações, como `upload_max_filesize` e `post_max_size`.
+Passo 2: Rodando o contêiner
+Depois de criar a imagem, inicie o contêiner com o comando:
 
-## Passo 3: Instalação do Git
+bash
+docker-compose up -d
+O -d executa o contêiner em segundo plano.
 
-1. **Baixar Git:**
-   - Acesse o site oficial do [Git](https://git-scm.com/).
-   - Faça o download do instalador correspondente ao seu sistema operacional.
+bash
+Copiar código
+docker ps
+Listar todos os contêineres (inclusive os parados):
 
-2. **Instalar Git:**
-   - Execute o instalador e siga as instruções na tela.
-   - É recomendado deixar as opções padrão marcadas durante a instalação.
-
-3. **Verificar a instalação:**
-   - Abra o terminal (ou o Git Bash no Windows) e digite:
-     ```bash
-     git --version
-     ```
-   - Você deve ver a versão do Git instalada.
-
-## Passo 4: Configuração do Git
-
-1. **Configurar informações do usuário:**
-   - No terminal, defina seu nome e e-mail:
-     ```bash
-     git config --global user.name "Seu Nome"
-     git config --global user.email "seuemail@example.com"
-     ```
-
-2. **Verificar configurações:**
-   - Para verificar as configurações, execute:
-     ```bash
-     git config --list
-     ```
-
-## Passo 5: Clonando um repositório
-
-Para clonar um repositório Git, use o seguinte comando:
-
-```bash
-git clone https://github.com/usuario/repositorio.git
+Contribuições
+Sinta-se à vontade para abrir issues ou enviar pull requests. Toda ajuda é bem-vinda!
