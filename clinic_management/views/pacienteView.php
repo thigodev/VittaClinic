@@ -29,12 +29,12 @@ $consultas = $paciente->getConsultas($pacienteEmail);
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
   <title>Clinica - Paciente</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
+  <link rel="stylesheet" href="clinic_management/public/styles/admin_padrao/homepage.css">
 </head>
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/Vitta-white.png">
+    <img src="clinic_management/public/midia/img/Vitta-white.png">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Meu Perfil</a>
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>

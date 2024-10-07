@@ -7,17 +7,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/umbrella.svg">
+  <link rel="stylesheet" href="clinic_management/public/styles/landing_page/lp.css">
+  <link rel="icon" href="clinic_management/public/midia/img/umbrella-logo.svg">
   <title>Vitta Clinic</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/landing_page/lp.css">
 </head>
 
 <body>
-  <!-- <a href="/clinic_management/views/adminMasterView.php">clinica</a>
-  <a href="/clinic_management/views/adminView.php">admin</a> -->
+  <!-- <a href="clinic_management/views/adminMasterView.php">clinica</a>
+  <a href="clinic_management/views/adminView.php">admin</a> -->
   <header id="home" class="header-bg">
     <div class="header">
-      <img class="header-logo" src="/clinic_management/public/midia//img/Vitta.png">
+      <img class="header-logo" src="clinic_management/public/midia//img/Vitta.png">
       <a class="login-mobile poppins-semibold c01" href="#">Fazer Login</a>
       <nav>
         <ul class="header-menu" data-scroll="smooth">
@@ -25,7 +25,7 @@
           <li><a class="poppins-medium c10" href="#benefits">Vantagens</a></li>
           <li><a class="poppins-medium c10" href="#faq">FAQ</a></li>
         </ul>
-        <a class="nav-btn poppins-semibold c01" href="/clinic_management/views/loginView.php">ENTRAR</a>
+        <a class="nav-btn poppins-semibold c01" href="clinic_management/views/loginView.php">ENTRAR</a>
       </nav>
     </div>
   </header>
@@ -34,17 +34,17 @@
       <div class="home-content">
         <h1 class="home-title poppins-semibold c11">Modernize a gestão da sua clínica<span class="detail">.</span></h1>
         <p class="home-text roboto-regular c10">Organize suas consultas, administre os pacientes, monitore prontuários médicos e gerencie sua clínica de maneira eficiente e protegida, tudo em um único sistema.</p>
-        <a class="home-btn poppins-semibold c01" href="/clinic_management/views/cadastroView.php">INICIE</a>
+        <a class="home-btn poppins-semibold c01" href="clinic_management/views/cadastroView.php">CADASTRE-SE</a>
       </div>
-      <img class="home-img" src="/clinic_management/public/midia//img/home-img.png" alt="Site Vitta por dentro">
+      <img class="home-img" src="clinic_management/public/midia//img/home-img.png" alt="Site Vitta por dentro">
     </div>
-    <img class="home-img-mobile" src="/clinic_management/public/midia//img/home-img-mobile.svg">
+    <img class="home-img-mobile" src="clinic_management/public/midia//img/home-img-mobile.svg">
   </main>
   <section id="about" class="about-bg">
     <div class="about" data-anima="show-left">
       <h1 class="about-title poppins-semibold c11">Sobre Nós<span class="detail">.</span></h1>
       <p class="about-text roboto-regular c10">Nosso objetivo é oferecer uma solução completa que permita a médicos e administradores focar no essencial: o cuidado aos pacientes. O Vitta disponibiliza ferramentas flexíveis e eficientes, abrangendo desde o agendamento de consultas até o acompanhamento do histórico médico, otimizando assim todos os aspectos da operação clínica.</p>
-      <img class="about-img" src="/clinic_management/public/midia//img/medicos.svg" width="500">
+      <img class="about-img" src="clinic_management/public/midia//img/medicos.svg" width="500">
     </div>
   </section>
 
@@ -53,17 +53,17 @@
       <h1 class="benefits-title poppins-semibold c01" data-anima="show-left">Vantagens<span class="detail-green">.</span></h1>
       <div class="benefits-container">
         <div class="item" data-anima="show-up">
-          <img src="/clinic_management/public/midia//img/schedule.svg">
+          <img src="clinic_management/public/midia//img/schedule.svg">
           <h3 class="item-title poppins-medium cBase02">Gestão de Agenda</h3>
           <p class="item-text roboto-regular c01">Facilite a organização dos seus compromissos com um sistema de agendamento eficiente. Torne a administração mais ágil e descomplicada!</p>
         </div>
         <div class="item" data-anima="show-down">
-          <img src="/clinic_management/public/midia//img/folder.svg">
+          <img src="clinic_management/public/midia//img/folder.svg">
           <h3 class="item-title poppins-medium cBase02">Prontuário Eletrônico</h3>
           <p class="item-text roboto-regular c01">Documente as informações dos pacientes em cada consulta e acesse os prontuários de maneira prática, a qualquer hora e em qualquer lugar.</p>
         </div>
         <div class="item" data-anima="show-up">
-          <img src="/clinic_management/public/midia//img/people.svg">
+          <img src="clinic_management/public/midia//img/people.svg">
           <h3 class="item-title poppins-medium cBase02">Gestão de Pacientes</h3>
           <p class="item-text roboto-regular c01">Registre seus pacientes e tenha acesso a todos os dados essenciais na palma da mão, garantindo uma administração eficiente e acessível sempre que necessário.</p>
         </div>
@@ -103,7 +103,7 @@ Sim, é possível acessar os prontuários de qualquer lugar, desde que você ten
 
   <footer class="footer-bg">
     <div class="footer">
-      <img class="logo-footer" src="/clinic_management/public/midia//img/Vitta-white.png">
+      <img class="logo-footer" src="clinic_management/public/midia//img/Vitta-white.png">
       <div class="contact">
         <h3 class="contact-title poppins-medium c01">Contato</h3>
         <ul data-scroll="smooth">
@@ -124,7 +124,7 @@ Sim, é possível acessar os prontuários de qualquer lugar, desde que você ten
     </div>
   </footer>
 
-  <script src="/clinic_management/public/scripts/lp.js"></script>
+  <script src="clinic_management/public/scripts/lp.js"></script>
 </body>
 
 </html>

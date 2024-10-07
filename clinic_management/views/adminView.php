@@ -35,12 +35,12 @@ $adminName = $_SESSION['nome'];
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
   <title>Clinica - Admin</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
+  <link rel="stylesheet" href="clinic_management/public/styles/admin_padrao/homepage.css">
 </head>
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/Vitta-white.png">
+    <img src="clinic_management/public/midia/img/Vitta-white.png">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Agendar Consulta</a>
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
@@ -51,7 +51,7 @@ $adminName = $_SESSION['nome'];
     <h1 class="wellcome-title poppins-semibold c11">Bem vindo, <?php echo htmlspecialchars($adminName); ?></h1>
 
     <div class="forms">
-      <form method="post" action="/clinic_management/auth/register_paciente.php">
+      <form method="post" action="clinic_management/auth/register_paciente.php">
         <h2 class="form-title poppins-semibold c11">Cadastrar Paciente</h2>
         <div class="input-container">
           <label class="roboto-regular">Nome do paciente</label>
@@ -80,7 +80,7 @@ $adminName = $_SESSION['nome'];
         <button type="submit" class="sign-up-btn-modal poppins-semibold c01">Cadastrar</button>
       </form>
 
-      <form method="post" action="/clinic_management/auth/register_medico.php">
+      <form method="post" action="clinic_management/auth/register_medico.php">
         <h2 class="form-title poppins-semibold c11">Cadastrar Médico</h2>
         <div class="input-container">
           <label class="roboto-regular">Nome do médico</label>
@@ -138,7 +138,7 @@ $adminName = $_SESSION['nome'];
               <td><?php echo htmlspecialchars($paciente['data_nascimento']); ?></td>
               <td><?php echo htmlspecialchars($paciente['sexo']); ?></td>
               <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_paciente.php" onsubmit="return confirm('Você tem certeza que deseja excluir este paciente?');">
+                <form class="form-delete-table" method="post" action="clinic_management/auth/delete_paciente.php" onsubmit="return confirm('Você tem certeza que deseja excluir este paciente?');">
                   <input type="hidden" name="id" value="<?php echo htmlspecialchars($paciente['id']); ?>">
                   <button class="roboto-regular c11" type="submit">Excluir</button>
                 </form>
@@ -170,7 +170,7 @@ $adminName = $_SESSION['nome'];
               <td><?php echo htmlspecialchars($medico['crm']); ?></td>
               <td><?php echo htmlspecialchars($medico['especialidade']); ?></td>
               <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_medico.php" onsubmit="return confirm('Você tem certeza que deseja excluir este médico?');">
+                <form class="form-delete-table" method="post" action="clinic_management/auth/delete_medico.php" onsubmit="return confirm('Você tem certeza que deseja excluir este médico?');">
                   <input type="hidden" name="id" value="<?php echo htmlspecialchars($medico['id']); ?>">
                   <button class="roboto-regular c11" type="submit">Excluir</button>
                 </form>
@@ -200,7 +200,7 @@ $adminName = $_SESSION['nome'];
               <td><?php echo htmlspecialchars($consulta['medico_crm']); ?></td>
               <td><?php echo htmlspecialchars($consulta['paciente_email']); ?></td>
               <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_consulta.php" onsubmit="return confirm('Você tem certeza que deseja excluir esta consulta?');">
+                <form class="form-delete-table" method="post" action="clinic_management/auth/delete_consulta.php" onsubmit="return confirm('Você tem certeza que deseja excluir esta consulta?');">
                   <input type="hidden" name="id" value="<?php echo htmlspecialchars($consulta['id']); ?>">
                   <button class="roboto-regular c11" type="submit">Excluir</button>
                 </form>
@@ -216,7 +216,7 @@ $adminName = $_SESSION['nome'];
     <div class="modal-box">
       <h2 class="modal-title poppins-semibold">Agendar Consulta</h2>
       <div class="modal-content">
-        <form method="post" action="/clinic_management/auth/create_consulta.php">
+        <form method="post" action="clinic_management/auth/create_consulta.php">
           <div class="input-container">
             <label class="roboto-regular">Paciente Email</label>
             <input type="text" class="roboto-regular" name="paciente_email" placeholder="Paciente Email*" required>

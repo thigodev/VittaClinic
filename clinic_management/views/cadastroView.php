@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="clinic_management/public/styles/auth/cadastro.css">
   <title>Vitta-Cadastro</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/autentication/cadastro.css">
 </head>
 
 <body>
   <header id="home" class="header-bg">
     <div class="header">
-      <a href="/clinic_management/views/landingPageView.php"><img class="header-logo" src="/clinic_management/public/midia//img/Vitta.png"></a>
+      <a href="clinic_management/views/landingPageView.php"><img class="header-logo" src="./clinic_management/public/midia/img/Vitta.png"></a>
     </div>
   </header>
 
   <section>
     <h1 class="sign-up-title poppins-medium c11">Cadastre sua <span class="detail poppins-semibold">clínica</span></h1>
-    <form method="post" action="/clinic_management/auth/register_clinic.php">
+    <form method="post" action="clinic_management/auth/register_clinic.php">
       <div class="input-container">
         <label class="roboto-regular">Nome da clínica</label>
         <input type="text" class="roboto-regular" name="clinic_name" placeholder="Nome da clínica*" required>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitta-Login</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/autentication/cadastro.css">
+  <link rel="stylesheet" href="clinic_management/public/styles/auth/cadastro.css">
 </head>
 
 <body>

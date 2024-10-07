@@ -32,12 +32,12 @@ $medicoName = $_SESSION['nome'];
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
   <title>Clinica - Médico</title>
-  <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
+  <link rel="stylesheet" href="clinic_management/public/styles/admin_padrao/homepage.css">
 </head>
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/Vitta-white.png">
+    <img src="clinic_management/public/midia/img/Vitta-white.png">
     <nav class="header-menu-admin">
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
     </nav>
@@ -65,7 +65,7 @@ $medicoName = $_SESSION['nome'];
           <td><?php echo htmlspecialchars($consulta['horario_consulta']); ?></td>
           <td><?php echo htmlspecialchars($consulta['paciente_email']); ?></td>
           <!-- <td>
-              <form class="form-delete-table" method="post" action="/clinic_management/auth/readHistory.php">
+              <form class="form-delete-table" method="post" action="clinic_management/auth/readHistory.php">
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($paciente['id']); ?>">
                 <button class="roboto-regular c11" type="submit">Histórico</button>
               </form>
