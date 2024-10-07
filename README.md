@@ -1,4 +1,4 @@
-VittaClinic
+## VittaClinic
 
 VittaClinic uma aplicação desenvolvida para facilitar o gerenciamento de clínicas médicas. O objetivo principal do sistema é automatizar e simplificar o controle de operações como o agendamento de consultas, gerenciamento de prontuários, cadastro de pacientes e médicos. A plataforma busca proporcionar uma experiência eficiente tanto para os profissionais da saúde quanto para os pacientes, garantindo uma gestão integrada e centralizada de informações.
 
