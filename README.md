@@ -38,12 +38,15 @@ Depois de criar a imagem, inicie o contêiner com o comando:
 
 bash
 docker-compose up -d
+
 O -d executa o contêiner em segundo plano.
 
+
+Listar todos os contêineres (inclusive os parados)
+
 bash
-Copiar código
 docker ps
-Listar todos os contêineres (inclusive os parados):
+
 
 ## Contribuições
 
