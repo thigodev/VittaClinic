@@ -1,1 +1,1 @@
-
+Essa parte do código está localizado o conjunto de ferramentas para o gerenciamento de criação de nova consulta, cadastras novas clinicas sendo assim podendo adicionar administradores, pacientes, médicos e para exclusão de variáveis como administradores, pacientes, médicos e consulta.
