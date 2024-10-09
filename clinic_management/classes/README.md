@@ -4,4 +4,4 @@
 - Paciente.php: Cuida dos pacientes, permitindo cadastro, remoção e listagem dos pacientes por clínica, além de ver suas consultas.
 - User.php: Classe principal que define funções básicas (cadastrar, apagar, listar), sendo usada pelas outras classes como base.
 - Medico.php: CLasse que cadastra, remove e lista médicos no sistema, incluindo especialidade e CRM... 
-... também permite buscar consultas relacionadas ao médico, com operações realizadas no banco de dados.
+também permite buscar consultas relacionadas ao médico, com operações realizadas no banco de dados.
