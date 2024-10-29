@@ -1,6 +1,6 @@
 1. Tabela admin
 Essa tabela armazena informações dos administradores.
-
+ 
 Campos:
 
 id: Identificador único do administrador (tipo int, não nulo).
