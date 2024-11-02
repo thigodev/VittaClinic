@@ -1,5 +1,5 @@
-import { Modal } from './modal.js';
-import { TabNav } from './tabnav.js';
+import { Modal } from "./modal.js";
+import { TabNav } from "./tabnav.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const containerModal = document.getElementById("modal");

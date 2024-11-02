@@ -1,7 +1,4 @@
 header {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +73,7 @@ th {
   padding: 8px;
   text-align: left;
   background-color: #137776;
-  font-family: 'roboto';
+  font-family: "roboto";
   font-weight: lighter;
 }
 

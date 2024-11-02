@@ -1,11 +1,11 @@
 :root {
-  --cBase01: #7712A1;
-  --cBase02: #B6ED1F;
+  --cBase01: #7712a1;
+  --cBase02: #13a4a3;
   --cBase03: #330047;
   --c11: #111111;
-  --c10: #2E2E2E;
-  --c05: #B2B2B2;
-  --c01: #F7F7F7;
+  --c10: #2e2e2e;
+  --c05: #b2b2b2;
+  --c01: #f7f7f7;
 }
 
 /* UTILITARIO */
@@ -136,25 +136,25 @@ button {
 [data-anima="show-left"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 [data-anima="show-right"] {
   opacity: 0;
   transform: translate3d(30px, 0, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 [data-anima="show-up"] {
   opacity: 0;
   transform: translate3d(0, 30px, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 [data-anima="show-down"] {
   opacity: 0;
   transform: translate3d(0, -30px, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 [data-anima="show-left"].active,
