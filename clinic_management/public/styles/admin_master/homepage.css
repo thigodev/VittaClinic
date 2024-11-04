@@ -8,6 +8,11 @@ header {
   border-radius: 8px;
 }
 
+.header-master {
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
 .exit-session-btn {
   background-color: transparent;
   font-size: 1rem;
@@ -22,7 +27,8 @@ header {
 }
 
 .wellcome-title {
-  text-align: center;
+  font-size: 30px;
+  text-align: justify;
   margin-bottom: 32px;
 }
 
@@ -32,8 +38,6 @@ header {
   height: 4px;
   background-color: #137776;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 16px;
 }
 
@@ -94,4 +98,8 @@ th {
   background-color: transparent;
   text-align: left;
   font-size: 1rem;
+}
+
+.glyphicon-log-out {
+  font-size: 25px;
 }
