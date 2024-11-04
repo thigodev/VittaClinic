@@ -27,7 +27,7 @@ $admins = $adminPadrao->getAll($clinicaId);
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/Vitta-white.png">
+    <img src="/clinic_management/public/img/vitta-logo-header.svg">
     <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
   </header>
 

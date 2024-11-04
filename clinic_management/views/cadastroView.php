@@ -11,7 +11,7 @@
 <body>
   <header id="home" class="header-bg">
     <div class="header">
-      <a href="/clinic_management/views/landingPageView.php"><img class="header-logo" src="/clinic_management/public/midia//img/Vitta.png"></a>
+      <a href="/clinic_management/views/landingPageView.php"><img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg"></a>
     </div>
   </header>
 

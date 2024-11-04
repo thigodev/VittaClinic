@@ -34,7 +34,7 @@ $consultas = $paciente->getConsultas($pacienteEmail);
 
 <body>
   <header>
-    <img src="/clinic_management/public/midia/img/Vitta-white.png">
+    <img src="/clinic_management/public/img/vitta-logo-header.svg">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Meu Perfil</a>
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
