@@ -30,11 +30,16 @@
   .about-title {
     font-size: 3rem;
   }
+
+  .about-text {
+    width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
   .about {
     text-align: left;
+    padding: 20px;
   }
 
   .about-title {
@@ -45,14 +50,26 @@
     font-size: 1.25rem;
   }
 
-  .about-text:before {
-    display: none;
+  .about-text {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .about-inner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .about-img {
+    width: 100%;
   }
 }
 
 @media (max-width: 400px) {
   .about {
     margin-top: 80px;
+    padding: 10px;
   }
 
   .about-title {
@@ -62,5 +79,9 @@
 
   .about-img {
     display: none;
+  }
+
+  .about-text {
+    font-size: 18px;
   }
 }
