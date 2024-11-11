@@ -1,11 +1,14 @@
+/* Estilos Globais para Títulos */
 .sign-up-title,
 .sign-in-title {
   font-size: 1.75rem;
   line-height: 1.5;
+  text-align: center;
+  color: #333;
 }
 
 .sign-up-title::after,
-.sign-in-title:after {
+.sign-in-title::after {
   content: "";
   width: 160px;
   height: 4px;
@@ -17,29 +20,68 @@
 }
 
 form {
-  margin-top: 32px;
-  width: 360px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  padding: 16px 0;
 }
 
 label {
-  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
 }
 
+label .required {
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* Inputs */
 input,
 #user_type,
 #paciente_sexo {
   margin-top: 4px;
   width: 100%;
   padding: 16px 10px;
-  background-color: var(--c01);
+  background-color: #f9f9f9;
   border-radius: 8px;
-  border: 1px solid #E7E6EB;
+  border: 1px solid #e7e6eb;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.input-container {
-  padding: 16px 0px;
+input:focus,
+#user_type:focus,
+#paciente_sexo:focus {
+  border-color: #137776;
+  outline: none;
 }
 
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:required:valid {
+  border-color: #137776;
+}
+
+/* Botão de Submissão */
 .sign-up-btn,
 .sign-in-btn {
   padding: 16px 10px;
@@ -48,8 +90,11 @@ input,
   background-color: #137776;
   border-radius: 8px;
   font-size: 1.125rem;
+  color: #fff;
+  font-weight: 600;
   line-height: 1;
-  transition: 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .sign-up-btn:hover,
@@ -57,8 +102,24 @@ input,
   background-color: #099394;
 }
 
-@media(max-width: 400px) {
+.sign-up-btn:active,
+.sign-in-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .sign-up-title {
+    font-size: 1.5rem;
+  }
+
   form {
+    padding: 20px;
     width: 100%;
+  }
+
+  .sign-up-btn,
+  .sign-in-btn {
+    font-size: 1rem;
+    padding: 14px 10px;
   }
 }

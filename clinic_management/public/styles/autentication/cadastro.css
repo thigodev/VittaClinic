@@ -1,27 +1,112 @@
+/* Importação de arquivos globais */
 @import "../global/geral.css";
 @import "./form.css";
 
+/* Header */
 header {
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 20px 90px;
+  background: #137776;
 }
 
+/* Centralização do conteúdo principal */
 section {
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media(max-width:600px) {
-  header {
-    justify-content: center;
+/* Título */
+.sign-up-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.detail {
+  color: #137776;
+}
+
+/* Containers de Input */
+.input-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #137776;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Botão de envio */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #137776;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button:active {
+  background-color: #00497a;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+
+  .sign-up-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
   }
 }
