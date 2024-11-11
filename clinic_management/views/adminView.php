@@ -40,7 +40,7 @@ $adminName = $_SESSION['nome'];
 
 <body>
   <header>
-    <img src="/clinic_management/public/img/vitta-logo-header.svg">
+    <img src="/clinic_management/public/img/vitta-white.svg">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Agendar Consulta</a>
       <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
