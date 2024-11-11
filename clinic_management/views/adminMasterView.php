@@ -27,7 +27,7 @@ $admins = $adminPadrao->getAll($clinicaId);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <title>Clinica Dashboard</title>
+  <title>Gestão de Administradores - Dashboard</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
 </head>
 
@@ -40,19 +40,23 @@ $admins = $adminPadrao->getAll($clinicaId);
   </header>
 
   <div class="container my-4">
-    <h1 class="wellcome-title h3  mb-4"><?php echo htmlspecialchars("Bem-vinda, {$clinicName}"); ?></h1>
+    <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Administradores"); ?></h1>
+    <p class="text-muted mb-4">Nesta página, você pode visualizar e gerenciar os administradores da clínica. Você tem a
+      opção de cadastrar novos administradores ou excluir os existentes. Utilize o botão abaixo para adicionar um novo
+      administrador.</p>
 
-    <!-- Título e Botão Cadastrar Administrador -->
+    <a href="dashboard.php" class="btn btn-secondary mb-4">
+      <i class="bi bi-arrow-left-circle"></i> Voltar para o Dashboard
+    </a>
+
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h3 class="h4 mb-0 text-secondary">Lista de Administradores</h3>
-      <!-- Botão Cadastrar Administrador -->
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCadastrarAdmin"
         aria-label="Cadastrar Administrador">
         <i class="bi bi-person-plus" alt="Ícone de adicionar administrador"></i>
       </button>
     </div>
 
-    <!-- Tabela de Administradores -->
     <table class="table table-striped table-hover">
       <thead>
         <tr>
@@ -62,7 +66,6 @@ $admins = $adminPadrao->getAll($clinicaId);
           <th>Ações</th>
         </tr>
       </thead>
-      <tbody>
       <tbody>
         <?php foreach ($admins as $admin): ?>
           <tr>
@@ -81,8 +84,6 @@ $admins = $adminPadrao->getAll($clinicaId);
             </td>
           </tr>
         <?php endforeach; ?>
-      </tbody>
-
       </tbody>
     </table>
   </div>
