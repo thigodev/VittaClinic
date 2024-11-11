@@ -62,6 +62,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: 0.5s;
 }
 
 .home-btn:hover {
