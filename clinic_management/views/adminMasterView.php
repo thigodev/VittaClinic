@@ -21,88 +21,107 @@ $admins = $adminPadrao->getAll($clinicaId);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="icon" href="img/umbrella.svg">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
-    integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+  <link rel="icon" href="img/umbrella.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <title>Clinica Dashboard</title>
-  <link rel=" stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
+  <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
 </head>
 
-<body>
-  <header class="header-master">
-    <img src="/clinic_management/public/img/vitta-white.svg">
-    <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">
-      <span class="glyphicon glyphicon-log-out"></span>
+<body class="bg-light">
+  <header class="header-master d-flex justify-content-between align-items-center p-3 text-white">
+    <img src="/clinic_management/public/img/vitta-white.svg" alt="Logo da clínica" height="50">
+    <button type="submit" onclick="location.href='logout.php'" class="btn btn-outline-light" aria-label="Sair">
+      <i class="bi bi-box-arrow-right" alt="Ícone de sair"></i>
     </button>
   </header>
 
-  <div class="container">
-    <h1 class="wellcome-title poppins-semibold c11"><?php echo htmlspecialchars("Bem-vinda, {$clinicName} ") ?></h1>
+  <div class="container my-4">
+    <h1 class="wellcome-title h3  mb-4"><?php echo htmlspecialchars("Bem-vinda, {$clinicName}"); ?></h1>
 
-    <button class="create-btn open-modal-btn poppins-semibold c01">Cadastrar Administrador</button>
-
-    <div>
-      <h3 class="poppins-semibold c11">Lista de Administradores</h3>
-      <table>
-        <thead>
-          <tr class="c01 poppins-medium">
-            <th class="first">#</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th class="last">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($admins as $admin): ?>
-            <tr class="registro roboto-regular">
-              <td><?php echo htmlspecialchars($admin['id']); ?></td>
-              <td><?php echo htmlspecialchars($admin['nome']); ?></td>
-              <td><?php echo htmlspecialchars($admin['email']); ?></td>
-              <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_admin.php"
-                  onsubmit="return confirm('Você tem certeza que deseja excluir este admin?');">
-                  <input type="hidden" name="id" value="<?php echo htmlspecialchars($admin['id']); ?>">
-                  <button class="roboto-regular c11" type="submit">Excluir</button>
-                </form>
-              </td>
-            </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
+    <!-- Título e Botão Cadastrar Administrador -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="h4 mb-0 text-secondary">Lista de Administradores</h3>
+      <!-- Botão Cadastrar Administrador -->
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCadastrarAdmin"
+        aria-label="Cadastrar Administrador">
+        <i class="bi bi-person-plus" alt="Ícone de adicionar administrador"></i>
+      </button>
     </div>
+
+    <!-- Tabela de Administradores -->
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tbody>
+        <?php foreach ($admins as $admin): ?>
+          <tr>
+            <td><?php echo htmlspecialchars($admin['id']); ?></td>
+            <td><?php echo htmlspecialchars($admin['nome']); ?></td>
+            <td><?php echo htmlspecialchars($admin['email']); ?></td>
+            <td>
+              <form method="post" action="/clinic_management/auth/delete_admin.php"
+                onsubmit="return confirm('Você tem certeza que deseja excluir este admin?');">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($admin['id']); ?>">
+                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center" type="submit"
+                  aria-label="Excluir administrador">
+                  <i class="bi bi-trash" alt="Ícone de excluir administrador"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+
+      </tbody>
+    </table>
   </div>
 
-  <div id="modal" class="modal-container">
-    <div class="modal-box">
-      <h2 class="modal-title poppins-semibold">Cadastrar Administrador</h2>
+  <!-- Modal para Cadastro de Administrador -->
+  <div class="modal fade" id="modalCadastrarAdmin" tabindex="-1" aria-labelledby="modalCadastrarAdminLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
       <div class="modal-content">
-        <form method="post" action="/clinic_management/auth/register_admin.php">
-          <div class="input-container">
-            <label class="roboto-regular">Nome</label>
-            <input type="text" class="roboto-regular" name="user_name" placeholder="Nome*" required>
-          </div>
-          <div class="input-container">
-            <label class="roboto-regular">E-mail</label>
-            <input type="email" class="roboto-regular" name="user_email" placeholder="Email" required>
-          </div>
-          <div class="input-container">
-            <label class="roboto-regular">Senha</label>
-            <input type="password" class="roboto-regular" name="user_senha" placeholder="Senha*" required>
-          </div>
-          <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
-          <button type="submit" class="sign-up-btn-modal poppins-semibold c01">Cadastrar</button>
-        </form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCadastrarAdminLabel">Cadastrar Administrador</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/clinic_management/auth/register_admin.php">
+            <div class="mb-3">
+              <label for="user_name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome*" required>
+            </div>
+            <div class="mb-3">
+              <label for="user_email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="user_email" name="user_email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="user_senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="user_senha" name="user_senha" placeholder="Senha*"
+                required>
+            </div>
+            <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
+            <button type="submit" class="btn btn-primary w-100" aria-label="Cadastrar administrador">Cadastrar</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
-  <script type="module" src="../public/scripts/main.js"></script>
+  <!-- Bootstrap 5 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
