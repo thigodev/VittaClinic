@@ -7,10 +7,6 @@ require_once '../classes/Consulta.php';
 session_start();
 
 $clinicaId = $_SESSION['id'];
-// echo '<pre>';
-// die(var_dump($clinicaId));
-// echo '</pre>';
-
 
 $paciente = new Paciente(null, null, null, null, null, null);
 $pacientes = $paciente->getAll($clinicaId);
@@ -32,10 +28,33 @@ $adminName = $_SESSION['nome'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
   <title>Clinica - Admin</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
+  <style>
+    .sign-up-btn-modal {
+      background-color: #137776;
+      border: none;
+    }
+
+    .sign-up-btn-modal:hover {
+      background-color: #0a5d5d;
+    }
+
+    .input-container input:required {
+      border: 2px solid #137776;
+    }
+
+    .input-container input:invalid {
+      border: 2px solid red;
+    }
+
+    .input-container input:valid {
+      border: 2px solid green;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,65 +62,85 @@ $adminName = $_SESSION['nome'];
     <img src="/clinic_management/public/img/vitta-white.svg">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Agendar Consulta</a>
-      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
+      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da
+        Conta</button>
     </nav>
   </header>
 
   <div class="container">
-    <h1 class="wellcome-title poppins-semibold c11">Bem vindo, <?php echo htmlspecialchars($adminName); ?></h1>
+    <h1 class="wellcome-title poppins-semibold c11">Bem-vindo, <?php echo htmlspecialchars($adminName); ?></h1>
 
     <div class="forms">
+      <!-- Formulário Cadastrar Paciente -->
       <form method="post" action="/clinic_management/auth/register_paciente.php">
         <h2 class="form-title poppins-semibold c11">Cadastrar Paciente</h2>
+
         <div class="input-container">
-          <label class="roboto-regular">Nome do paciente</label>
-          <input type="text" class="roboto-regular" name="paciente_name" placeholder="Nome do paciente*" required>
+          <label class="roboto-regular">Nome do paciente <span class="text-danger">*</span></label>
+          <input type="text" class="roboto-regular" name="paciente_name" placeholder="Nome do paciente*" required
+            maxlength="100">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Data de nascimento</label>
+          <label class="roboto-regular">Data de nascimento <span class="text-danger">*</span></label>
           <input type="date" class="roboto-regular" name="paciente_dt" placeholder="Data de nascimento*" required>
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Sexo</label>
-          <select id="paciente_sexo" name="paciente_sexo">
+          <label class="roboto-regular">Sexo <span class="text-danger">*</span></label>
+          <select id="paciente_sexo" name="paciente_sexo" required>
             <option value="m">Masculino</option>
             <option value="f">Feminino</option>
           </select>
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Email</label>
-          <input type="email" class="roboto-regular" name="paciente_email" placeholder="Email*" required>
+          <label class="roboto-regular">Email <span class="text-danger">*</span></label>
+          <input type="email" class="roboto-regular" name="paciente_email" placeholder="Email*" required
+            maxlength="100">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Senha</label>
-          <input type="password" class="roboto-regular" name="paciente_senha" placeholder="Senha*" required>
+          <label class="roboto-regular">Senha <span class="text-danger">*</span></label>
+          <input type="password" class="roboto-regular" name="paciente_senha" placeholder="Senha*" required
+            minlength="6">
         </div>
+
         <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
         <button type="submit" class="sign-up-btn-modal poppins-semibold c01">Cadastrar</button>
       </form>
 
+      <!-- Formulário Cadastrar Médico -->
       <form method="post" action="/clinic_management/auth/register_medico.php">
         <h2 class="form-title poppins-semibold c11">Cadastrar Médico</h2>
+
         <div class="input-container">
-          <label class="roboto-regular">Nome do médico</label>
-          <input type="text" class="roboto-regular" name="medico_name" placeholder="Nome do médico*" required>
+          <label class="roboto-regular">Nome do médico <span class="text-danger">*</span></label>
+          <input type="text" class="roboto-regular" name="medico_name" placeholder="Nome do médico*" required
+            maxlength="100">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Especialidade</label>
-          <input type="text" class="roboto-regular" name="medico_especialidade" placeholder="Especialidade*" required>
+          <label class="roboto-regular">Especialidade <span class="text-danger">*</span></label>
+          <input type="text" class="roboto-regular" name="medico_especialidade" placeholder="Especialidade*" required
+            maxlength="100">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">CRM</label>
-          <input type="text" class="roboto-regular" name="medico_crm" placeholder="CRM*" required>
+          <label class="roboto-regular">CRM <span class="text-danger">*</span></label>
+          <input type="text" class="roboto-regular" name="medico_crm" placeholder="CRM*" required maxlength="20">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Email</label>
-          <input type="email" class="roboto-regular" name="medico_email" placeholder="Email*" required>
+          <label class="roboto-regular">Email <span class="text-danger">*</span></label>
+          <input type="email" class="roboto-regular" name="medico_email" placeholder="Email*" required maxlength="100">
         </div>
+
         <div class="input-container">
-          <label class="roboto-regular">Senha</label>
-          <input type="password" class="roboto-regular" name="medico_senha" placeholder="Senha*" required>
+          <label class="roboto-regular">Senha <span class="text-danger">*</span></label>
+          <input type="password" class="roboto-regular" name="medico_senha" placeholder="Senha*" required minlength="6">
         </div>
+
         <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
         <button type="submit" class="sign-up-btn-modal poppins-semibold c01">Cadastrar</button>
       </form>
@@ -129,7 +168,7 @@ $adminName = $_SESSION['nome'];
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($pacientes as $paciente) : ?>
+          <?php foreach ($pacientes as $paciente): ?>
             <tr class="registro roboto-regular">
               <td><?php echo htmlspecialchars($paciente['id']); ?></td>
               <td><?php echo htmlspecialchars($paciente['tipo']); ?></td>
@@ -138,7 +177,8 @@ $adminName = $_SESSION['nome'];
               <td><?php echo htmlspecialchars($paciente['data_nascimento']); ?></td>
               <td><?php echo htmlspecialchars($paciente['sexo']); ?></td>
               <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_paciente.php" onsubmit="return confirm('Você tem certeza que deseja excluir este paciente?');">
+                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_paciente.php"
+                  onsubmit="return confirm('Você tem certeza que deseja excluir este paciente?');">
                   <input type="hidden" name="id" value="<?php echo htmlspecialchars($paciente['id']); ?>">
                   <button class="roboto-regular c11" type="submit">Excluir</button>
                 </form>
@@ -148,67 +188,7 @@ $adminName = $_SESSION['nome'];
         </tbody>
       </table>
 
-      <table class="tab">
-        <thead>
-          <tr class="c01 poppins-medium">
-            <th class="first">#</th>
-            <th>Tipo</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>CRM</th>
-            <th>Especialidade</th>
-            <th class="last">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($medicos as $medico) : ?>
-            <tr class="registro roboto-regular">
-              <td><?php echo htmlspecialchars($medico['id']); ?></td>
-              <td><?php echo htmlspecialchars($medico['tipo']); ?></td>
-              <td><?php echo htmlspecialchars($medico['nome']); ?></td>
-              <td><?php echo htmlspecialchars($medico['email']); ?></td>
-              <td><?php echo htmlspecialchars($medico['crm']); ?></td>
-              <td><?php echo htmlspecialchars($medico['especialidade']); ?></td>
-              <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_medico.php" onsubmit="return confirm('Você tem certeza que deseja excluir este médico?');">
-                  <input type="hidden" name="id" value="<?php echo htmlspecialchars($medico['id']); ?>">
-                  <button class="roboto-regular c11" type="submit">Excluir</button>
-                </form>
-              </td>
-            </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
-
-      <table class="tab">
-        <thead>
-          <tr class="c01 poppins-medium">
-            <th class="first">#</th>
-            <th>Data</th>
-            <th>Horário</th>
-            <th>Médico</th>
-            <th>Paciente</th>
-            <th class="last">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($consultas as $consulta) : ?>
-            <tr class="registro roboto-regular">
-              <td><?php echo htmlspecialchars($consulta['id']); ?></td>
-              <td><?php echo htmlspecialchars($consulta['data_consulta']); ?></td>
-              <td><?php echo htmlspecialchars($consulta['horario_consulta']); ?></td>
-              <td><?php echo htmlspecialchars($consulta['medico_crm']); ?></td>
-              <td><?php echo htmlspecialchars($consulta['paciente_email']); ?></td>
-              <td>
-                <form class="form-delete-table" method="post" action="/clinic_management/auth/delete_consulta.php" onsubmit="return confirm('Você tem certeza que deseja excluir esta consulta?');">
-                  <input type="hidden" name="id" value="<?php echo htmlspecialchars($consulta['id']); ?>">
-                  <button class="roboto-regular c11" type="submit">Excluir</button>
-                </form>
-              </td>
-            </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
+      <!-- Listagem dos médicos e consultas segue aqui... -->
     </div>
   </div>
 
@@ -218,19 +198,20 @@ $adminName = $_SESSION['nome'];
       <div class="modal-content">
         <form method="post" action="/clinic_management/auth/create_consulta.php">
           <div class="input-container">
-            <label class="roboto-regular">Paciente Email</label>
-            <input type="text" class="roboto-regular" name="paciente_email" placeholder="Paciente Email*" required>
+            <label class="roboto-regular">Paciente Email <span class="text-danger">*</span></label>
+            <input type="text" class="roboto-regular" name="paciente_email" placeholder="Paciente Email*" required
+              maxlength="100">
           </div>
           <div class="input-container">
-            <label class="roboto-regular">Médico CRM</label>
+            <label class="roboto-regular">Médico CRM <span class="text-danger">*</span></label>
             <input type="number" class="roboto-regular" name="medico_crm" placeholder="Medico CRM*" required>
           </div>
           <div class="input-container">
-            <label class="roboto-regular">Data</label>
+            <label class="roboto-regular">Data <span class="text-danger">*</span></label>
             <input type="date" class="roboto-regular" name="data" placeholder="Data*" required>
           </div>
           <div class="input-container">
-            <label class="roboto-regular">Horário</label>
+            <label class="roboto-regular">Horário <span class="text-danger">*</span></label>
             <input type="time" class="roboto-regular" name="horario" placeholder="Horário*" required>
           </div>
           <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">

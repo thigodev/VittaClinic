@@ -40,7 +40,6 @@ $clinicName = $_SESSION['nome'];
                     <div class="card-body">
                         <h5 class="card-title text-center ">Administradores</h5>
                         <p class="card-text text-center"><strong>5</strong> Administradores</p>
-                        <a href="admin_master_view.php" class="btn btn-outline-primary w-100">Ver detalhes</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +49,6 @@ $clinicName = $_SESSION['nome'];
                     <div class="card-body">
                         <h5 class="card-title text-center">Consultas</h5>
                         <p class="card-text text-center"><strong>120</strong> Consultas agendadas</p>
-                        <a href="consultas.php" class="btn btn-outline-primary w-100">Ver detalhes</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +58,6 @@ $clinicName = $_SESSION['nome'];
                     <div class="card-body">
                         <h5 class="card-title text-center">Pacientes</h5>
                         <p class="card-text text-center"><strong>300</strong> Pacientes registrados</p>
-                        <a href="pacientes.php" class="btn btn-outline-primary w-100">Ver detalhes</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +67,6 @@ $clinicName = $_SESSION['nome'];
                     <div class="card-body">
                         <h5 class="card-title text-center">Receitas</h5>
                         <p class="card-text text-center"><strong>R$ 15.000</strong> em receitas mensais</p>
-                        <a href="receitas.php" class="btn btn-outline-primary w-100">Ver detalhes</a>
                     </div>
                 </div>
             </div>
@@ -83,11 +79,8 @@ $clinicName = $_SESSION['nome'];
                     <a href="adminMasterView.php" class="btn btn-outline-info d-flex align-items-center">
                         <i class="bi bi-person-plus me-2"></i> Cadastrar Administrador
                     </a>
-                    <a href="consultas.php" class="btn btn-outline-info d-flex align-items-center">
-                        <i class="bi bi-calendar-check me-2"></i> Agendar Consulta
-                    </a>
-                    <a href="pacientes.php" class="btn btn-outline-info d-flex align-items-center">
-                        <i class="bi bi-person-lines-fill me-2"></i> Pacientes
+                    <a href="adminView.php" class="btn btn-outline-info d-flex align-items-center">
+                        <i class="bi bi-person-lines-fill me-2"></i> Médicos e Pacientes
                     </a>
                 </div>
             </div>
@@ -102,7 +95,6 @@ $clinicName = $_SESSION['nome'];
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
