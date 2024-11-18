@@ -1,53 +1,65 @@
-## VittaClinic
+# VittaClinic
 
-VittaClinic é uma aplicação criada para otimizar a administração de clínicas médicas. Seu principal objetivo é automatizar e simplificar o gerenciamento de tarefas como agendamento de consultas, administração de prontuários e cadastro de pacientes e médicos. A plataforma visa oferecer uma experiência eficiente para profissionais de saúde e pacientes, assegurando uma gestão integrada e centralizada das informações.
+O **VittaClinic** é uma plataforma desenvolvida para otimizar a administração de clínicas médicas. Seu propósito é simplificar tarefas como agendamento de consultas, gerenciamento de prontuários e cadastro de pacientes e médicos. A solução oferece uma experiência integrada e eficiente, tanto para profissionais de saúde quanto para pacientes.
+
+---
 
 ## Sumário
 
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Configurando o Ambiente com Docker](#configurando-o-ambiente-com-docker)
-- [Comandos Úteis do Docker](#comandos-úteis-do-docker)
-- [Contribuições](#contribuições)
-- [Licença](#licença)
+- [Pré-requisitos](#pré-requisitos)  
+- [Instalação](#instalação)  
+- [Configuração com Docker](#configuração-com-docker)  
+- [Comandos Úteis do Docker](#comandos-úteis-do-docker)  
+- [Como Contribuir](#como-contribuir)  
+- [Licença](#licença)  
+
+---
 
 ## Pré-requisitos
 
-Antes de iniciar, você precisa ter o seguinte software instalado na sua máquina:
+Antes de começar, verifique se você possui o seguinte instalado:
 
-- [Docker](https://www.docker.com/get-started) (Docker Desktop para Windows/Mac, Docker Engine para Linux)
+- [Docker](https://www.docker.com/get-started) (Docker Desktop para Windows/Mac ou Docker Engine para Linux)
 
-Verifique se o Docker está corretamente instalado executando o comando:
-
-bash
+Para confirmar a instalação do Docker, execute:  
+```bash
 docker --version
+```
 
--------------------------------------------------------------------------------------------------------------
+---
 
-Configurando o Ambiente com Docker
-Siga os passos abaixo para configurar e executar o ambiente de desenvolvimento com Docker:
+## Configuração com Docker
 
-Passo 1: Construir a imagem Docker
-No diretório raiz do projeto, execute o comando abaixo para criar a imagem Docker:
+Configure o ambiente de desenvolvimento seguindo estes passos:
 
-bash
+### 1. Criar a imagem Docker  
+No diretório raiz do projeto, execute:  
+```bash
 docker-compose up --build
+```
 
-Passo 2: Rodando o contêiner
-Depois de criar a imagem, inicie o contêiner com o comando:
-
-bash
+### 2. Iniciar o contêiner  
+Após a criação da imagem, inicie o contêiner:  
+```bash
 docker-compose up -d
+```
+> A flag `-d` executa o contêiner em segundo plano.
 
-O -d executa o contêiner em segundo plano.
+### 3. Verificar os contêineres em execução  
+Para listar todos os contêineres, incluindo os parados, utilize:  
+```bash
+docker ps -a
+```
 
+---
 
-Listar todos os contêineres (inclusive os parados)
+## Como Contribuir
 
-bash
-docker ps
+Quer ajudar a melhorar o VittaClinic? Contribuições são sempre bem-vindas!  
+Você pode:  
+- Abrir issues com sugestões ou problemas encontrados.  
+- Enviar pull requests com melhorias ou correções.  
 
+---
 
-## Contribuições
-
-Sinta-se à vontade para abrir issues ou enviar pull requests. Toda ajuda é bem-vinda!
+Agradecemos pelo interesse de quem quiser colaborar com o projeto! 🎉
