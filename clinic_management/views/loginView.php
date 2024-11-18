@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../public/img/favicon.ico">
   <title>Login</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/autentication/cadastro.css">
 </head>

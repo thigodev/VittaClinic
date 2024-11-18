@@ -26,8 +26,9 @@ $consultas = $paciente->getConsultas($pacienteEmail);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/umbrella.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../public/img/favicon.ico">
   <title>Clinica - Paciente</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
 </head>
@@ -37,7 +38,8 @@ $consultas = $paciente->getConsultas($pacienteEmail);
     <img src="/clinic_management/public/img/vitta-white.svg">
     <nav class="header-menu-admin">
       <a href="#" class="open-modal-btn roboto-regular c01">Meu Perfil</a>
-      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
+      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da
+        Conta</button>
     </nav>
   </header>
 
@@ -58,7 +60,7 @@ $consultas = $paciente->getConsultas($pacienteEmail);
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($consultas as $consulta) : ?>
+          <?php foreach ($consultas as $consulta): ?>
             <tr class="registro roboto-regular">
               <td><?php echo htmlspecialchars($consulta['id']); ?></td>
               <td><?php echo htmlspecialchars($consulta['data_consulta']); ?></td>
@@ -76,18 +78,21 @@ $consultas = $paciente->getConsultas($pacienteEmail);
         <h2 class="modal-title perfil-title poppins-semibold">Meu Perfil</h2>
         <div class="info-container">
           <ul>
-            <li class="poppins-semibold c11">Nome: <span class="roboto-regular c11"><?php echo htmlspecialchars($pacienteName); ?></span></li>
-            <li class="poppins-semibold c11">Email: <span class="roboto-regular c11"><?php echo htmlspecialchars($pacienteEmail); ?></span></li>
-            <li class="poppins-semibold c11">Data de nascimento: <span class="roboto-regular c11"><?php echo htmlspecialchars($pacienteDt); ?></span></li>
+            <li class="poppins-semibold c11">Nome: <span
+                class="roboto-regular c11"><?php echo htmlspecialchars($pacienteName); ?></span></li>
+            <li class="poppins-semibold c11">Email: <span
+                class="roboto-regular c11"><?php echo htmlspecialchars($pacienteEmail); ?></span></li>
+            <li class="poppins-semibold c11">Data de nascimento: <span
+                class="roboto-regular c11"><?php echo htmlspecialchars($pacienteDt); ?></span></li>
             <li class="poppins-semibold c11">Sexo: <span class="roboto-regular c11"><?php
 
-                                                                                    if ($pacienteSexo == 'm') {
-                                                                                      echo "Masculino";
-                                                                                    } else {
-                                                                                      echo "Feminino";
-                                                                                    }
+            if ($pacienteSexo == 'm') {
+              echo "Masculino";
+            } else {
+              echo "Feminino";
+            }
 
-                                                                                    ?></span></li>
+            ?></span></li>
           </ul>
         </div>
         <div class="modal-content">

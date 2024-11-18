@@ -29,8 +29,9 @@ $medicoName = $_SESSION['nome'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/umbrella.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../public/img/favicon.ico">
   <title>Clinica - Médico</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
 </head>
@@ -39,7 +40,8 @@ $medicoName = $_SESSION['nome'];
   <header>
     <img src="/clinic_management/public/img/vitta-white.svg">
     <nav class="header-menu-admin">
-      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da Conta</button>
+      <button type="submit" onclick="location.href='logout.php'" class="exit-session-btn poppins-semibold c01">Sair da
+        Conta</button>
     </nav>
   </header>
 
@@ -58,19 +60,19 @@ $medicoName = $_SESSION['nome'];
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($consultas as $consulta) : ?>
-        <tr class="registro roboto-regular">
-          <td><?php echo htmlspecialchars($consulta['id']); ?></td>
-          <td><?php echo htmlspecialchars($consulta['data_consulta']); ?></td>
-          <td><?php echo htmlspecialchars($consulta['horario_consulta']); ?></td>
-          <td><?php echo htmlspecialchars($consulta['paciente_email']); ?></td>
-          <!-- <td>
+        <?php foreach ($consultas as $consulta): ?>
+          <tr class="registro roboto-regular">
+            <td><?php echo htmlspecialchars($consulta['id']); ?></td>
+            <td><?php echo htmlspecialchars($consulta['data_consulta']); ?></td>
+            <td><?php echo htmlspecialchars($consulta['horario_consulta']); ?></td>
+            <td><?php echo htmlspecialchars($consulta['paciente_email']); ?></td>
+            <!-- <td>
               <form class="form-delete-table" method="post" action="/clinic_management/auth/readHistory.php">
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($paciente['id']); ?>">
                 <button class="roboto-regular c11" type="submit">Histórico</button>
               </form>
             </td> -->
-        </tr>
+          </tr>
         <?php endforeach; ?>
       </tbody>
     </table>
