@@ -19,7 +19,7 @@ COPY . /var/www/html/
 WORKDIR /var/www/html
 
 # Expondo a porta 80
-EXPOSE 80
+EXPOSE 40
 
 # Comando padrão
 CMD ["apache2-foreground"]
