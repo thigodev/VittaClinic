@@ -321,13 +321,3 @@ table tbody tr:hover {
   background-color: var(--info);
   color: white;
 }
-
-/* MODAL */
-
-.modal-header {
-  width: 100%;
-}
-
-.modal-footer {
-  width: 100%;
-}

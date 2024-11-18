@@ -68,4 +68,5 @@ class Medico extends User
       die("Error: " . $e->getMessage());
     }
   }
+
 }

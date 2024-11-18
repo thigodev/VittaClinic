@@ -39,14 +39,13 @@ $adminName = $_SESSION['nome'];
     </header>
 
     <div class="container my-4">
-        <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Médicos"); ?></h1>
+        <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Médicos"); ?>
+        </h1>
         <p class="text-muted mb-4">Nesta página, você pode visualizar e gerenciar os médicos da clínica. Você pode
             cadastrar novos médicos ou excluir os existentes. Utilize o botão abaixo para adicionar um novo médico.</p>
-
         <a href="dashboard.php" class="btn btn-secondary mb-4">
-            <i class="bi bi-arrow-left-circle"></i> Voltar para o Dashboard
+            <i class="bi bi-arrow-left-circle"></i> Voltar para Dashboard
         </a>
-
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="h4 mb-0 text-secondary">Lista de Médicos</h3>
             <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCadastrarMedico"
@@ -64,8 +63,7 @@ $adminName = $_SESSION['nome'];
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Nome</th>
+                        <th>Médico(a)</th>
                         <th>Especialidade</th>
                         <th>CRM</th>
                         <th>E-mail</th>
@@ -75,7 +73,6 @@ $adminName = $_SESSION['nome'];
                 <tbody>
                     <?php foreach ($medicos as $medico): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($medico['id']); ?></td>
                             <td><?php echo htmlspecialchars($medico['nome']); ?></td>
                             <td><?php echo htmlspecialchars($medico['especialidade']); ?></td>
                             <td><?php echo htmlspecialchars($medico['crm']); ?></td>
@@ -108,33 +105,39 @@ $adminName = $_SESSION['nome'];
                 <div class="modal-body">
                     <form method="post" action="/clinic_management/auth/register_medico.php">
                         <div class="mb-3">
-                            <label for="medico_name" class="form-label">Nome do Médico</label>
+                            <label for="medico_name" class="form-label">Nome do(a) Médico(a) <strong
+                                    class="danger">*</strong></label>
                             <input type="text" class="form-control" id="medico_name" name="medico_name"
-                                placeholder="Nome*" required>
+                                placeholder="Informe o nome completo" required>
                         </div>
                         <div class="mb-3">
                             <label for="medico_especialidade" class="form-label">Especialidade</label>
                             <input type="text" class="form-control" id="medico_especialidade"
-                                name="medico_especialidade" placeholder="Especialidade*" required>
+                                name="medico_especialidade" placeholder="Exemplo: Cardiologista (opcional)">
                         </div>
                         <div class="mb-3">
-                            <label for="medico_crm" class="form-label">CRM</label>
-                            <input type="text" class="form-control" id="medico_crm" name="medico_crm" placeholder="CRM*"
-                                required>
+                            <label for="medico_crm" class="form-label">CRM <strong class="danger">*</strong></label>
+                            <input type="text" class="form-control" id="medico_crm" name="medico_crm"
+                                placeholder="Exemplo: CRM-CE: 123456" required>
                         </div>
                         <div class="mb-3">
-                            <label for="medico_email" class="form-label">Email</label>
+                            <label for="medico_email" class="form-label">E-mail <strong
+                                    class="danger">*</strong></label>
                             <input type="email" class="form-control" id="medico_email" name="medico_email"
-                                placeholder="Email*" required>
+                                placeholder="Exemplo: vitta@gmail.com" required>
                         </div>
                         <div class="mb-3">
-                            <label for="medico_senha" class="form-label">Senha</label>
+                            <label for="medico_senha" class="form-label">Senha <strong class="danger">*</strong></label>
                             <input type="password" class="form-control" id="medico_senha" name="medico_senha"
-                                placeholder="Senha*" required>
+                                placeholder="Senha de no mínimo 8 caracteres" required>
                         </div>
                         <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
-                        <button type="submit" class="btn btn-primary w-100"
-                            aria-label="Cadastrar Médico">Cadastrar</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline" aria-label="Fechar"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary"
+                                aria-label="Cadastrar Médico">Cadastrar</button>
+                        </div>
                     </form>
                 </div>
             </div>

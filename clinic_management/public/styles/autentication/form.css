@@ -42,11 +42,6 @@ label {
   margin-bottom: 8px;
 }
 
-label .required {
-  color: red;
-  font-size: 1.2rem;
-}
-
 /* Inputs */
 input,
 #user_type,
@@ -71,10 +66,6 @@ input:focus,
 input::placeholder {
   color: #999;
   font-style: italic;
-}
-
-input:invalid {
-  border-color: red;
 }
 
 input:required:valid {
