@@ -39,8 +39,7 @@ $adminName = $_SESSION['nome'];
     </header>
 
     <div class="container my-4">
-        <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Médicos"); ?>
-        </h1>
+        <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Médicos"); ?></h1>
         <p class="text-muted mb-4">Nesta página, você pode visualizar e gerenciar os médicos da clínica. Você pode
             cadastrar novos médicos ou excluir os existentes. Utilize o botão abaixo para adicionar um novo médico.</p>
         <a href="dashboard.php" class="btn btn-secondary mb-4">
@@ -78,13 +77,25 @@ $adminName = $_SESSION['nome'];
                             <td><?php echo htmlspecialchars($medico['crm']); ?></td>
                             <td><?php echo htmlspecialchars($medico['email']); ?></td>
                             <td>
-                                <!-- Botão para abrir o modal de confirmação de exclusão -->
-                                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
-                                    data-bs-toggle="modal" data-bs-target="#modalConfirmarExclusao"
-                                    data-id="<?php echo htmlspecialchars($medico['id']); ?>"
-                                    data-nome="<?php echo htmlspecialchars($medico['nome']); ?>">
-                                    <i class="bi bi-trash" alt="Ícone de excluir médico"></i>
-                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button"
+                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+                                    <ul class="dropdown-menu disabled" aria-labelledby="dropdownMenuButton">
+                                        <!-- <li><a class="dropdown-item"
+                                                href="editar_medico.php?id=<?php echo htmlspecialchars($medico['id']); ?>">
+                                                <i class="bi bi-pencil"></i> Editar</a></li>
+                                        <li> -->
+                                        <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#modalConfirmarExclusao"
+                                            data-id="<?php echo htmlspecialchars($medico['id']); ?>"
+                                            data-nome="<?php echo htmlspecialchars($medico['nome']); ?>">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -108,28 +119,29 @@ $adminName = $_SESSION['nome'];
                             <label for="medico_name" class="form-label">Nome do(a) Médico(a) <strong
                                     class="danger">*</strong></label>
                             <input type="text" class="form-control" id="medico_name" name="medico_name"
-                                placeholder="Informe o nome completo" required>
+                                placeholder="Informe o nome completo" required maxlength="100">
                         </div>
                         <div class="mb-3">
                             <label for="medico_especialidade" class="form-label">Especialidade</label>
                             <input type="text" class="form-control" id="medico_especialidade"
-                                name="medico_especialidade" placeholder="Exemplo: Cardiologista (opcional)">
+                                name="medico_especialidade" placeholder="Exemplo: Cardiologista (opcional)"
+                                maxlength="50">
                         </div>
                         <div class="mb-3">
                             <label for="medico_crm" class="form-label">CRM <strong class="danger">*</strong></label>
                             <input type="text" class="form-control" id="medico_crm" name="medico_crm"
-                                placeholder="Exemplo: CRM-CE: 123456" required>
+                                placeholder="Exemplo: CRM-CE: 123456" required maxlength="14">
                         </div>
                         <div class="mb-3">
                             <label for="medico_email" class="form-label">E-mail <strong
                                     class="danger">*</strong></label>
                             <input type="email" class="form-control" id="medico_email" name="medico_email"
-                                placeholder="Exemplo: vitta@gmail.com" required>
+                                placeholder="Exemplo: vitta@gmail.com" required maxlength="100">
                         </div>
                         <div class="mb-3">
                             <label for="medico_senha" class="form-label">Senha <strong class="danger">*</strong></label>
                             <input type="password" class="form-control" id="medico_senha" name="medico_senha"
-                                placeholder="Senha de no mínimo 8 caracteres" required>
+                                placeholder="Senha de no mínimo 8 caracteres" required maxlength="20">
                         </div>
                         <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
                         <div class="modal-footer">
