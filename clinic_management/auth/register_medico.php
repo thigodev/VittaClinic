@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $medico->cadastrar();
 
         // Redirecione, assegurando que $adminName está definido
-        header('Location: /clinic_management/views/adminView.php?adminName=' . urlencode($adminName));
+        header('Location: /clinic_management/views/adminDoctorView.php?adminName=' . urlencode($adminName));
         exit(); // Adicione exit após o redirecionamento
     } else {
         die("Error: All fields are required.");

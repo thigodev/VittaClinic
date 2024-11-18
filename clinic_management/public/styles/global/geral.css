@@ -1,14 +1,18 @@
 :root {
-  --cBase01: #7712a1;
-  --cBase02: #13a4a3;
-  --cBase03: #330047;
-  --c11: #111111;
-  --c10: #2e2e2e;
-  --c05: #b2b2b2;
-  --c01: #f7f7f7;
+  --cBase01: #137776;
+  --cBase02: #0a5d5d;
+  --cBase03: #0b8b7b;
+  --cBackground: #f3f3f3;
+  --cTextPrimary: #333333;
+  --cTextSecondary: #666666;
+  --cTextLight: #b0b0b0;
+  --success: #5cb85c;
+  --danger: #d9534f;
+  --warning: #f0ad4e;
+  --info: #5bc0de;
 }
 
-/* UTILITARIO */
+/* TIPOGRAFIA */
 
 .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -40,21 +44,7 @@
   font-style: normal;
 }
 
-.c11 {
-  color: var(--c11);
-}
-
-.c10 {
-  color: var(--c10);
-}
-
-.c05 {
-  color: var(--c05);
-}
-
-.c01 {
-  color: var(--c01);
-}
+/* COR DO TEXTO */
 
 .cBase01 {
   color: var(--cBase01);
@@ -64,7 +54,39 @@
   color: var(--cBase02);
 }
 
-/* UTILITARIO */
+.cBase03 {
+  color: var(--cBase03);
+}
+
+.cTextPrimary {
+  color: var(--cTextPrimary);
+}
+
+.cTextSecondary {
+  color: var(--cTextSecondary);
+}
+
+.cTextLight {
+  color: var(--cTextLight);
+}
+
+.success {
+  color: var(--success);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.info {
+  color: var(--info);
+}
+
+/* RESET DE ESTILOS */
 
 * {
   margin: 0;
@@ -88,12 +110,34 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--cBase02);
+  outline: none;
+}
+
+/* DESIGN E LAYOUT */
+
 .detail {
-  color: rgb(19, 119, 118);
+  color: var(--cBase02);
 }
 
 .detail-green {
-  color: var(--cBase02);
+  color: var(--success);
 }
 
 .perfil-title {
@@ -120,17 +164,12 @@ li {
   margin: 16px 0px;
   padding: 16px;
   border-radius: 8px;
-  background-color: var(--c01);
+  background-color: var(--cBackground);
   transition: 0.2s ease;
 }
 
 .info-container ul li:hover {
   background-color: transparent;
-}
-
-button {
-  border: none;
-  cursor: pointer;
 }
 
 [data-anima="show-left"] {
@@ -163,4 +202,132 @@ button {
 [data-anima="show-right"].active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+/* BOTÕES */
+
+button,
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--cBase01);
+  border: 1px solid var(--cBase01);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cBase01);
+  color: white;
+  border-color: var(--cBase01);
+}
+a.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover,
+a.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--cBase01);
+  color: white;
+  border: 1px solid var(--cBase02);
+}
+
+.btn-primary:hover {
+  background-color: var(--cBase02);
+  border-color: var(--cBase02);
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: white;
+  border: 1px solid var(--success);
+}
+
+.btn-success:hover {
+  background-color: #3e9e3b;
+  border-color: #3e9e3b;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+  border: 1px solid var(--danger);
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+.btn-warning {
+  background-color: var(--warning);
+  color: white;
+  border: 1px solid var(--warning);
+}
+
+.btn-warning:hover {
+  background-color: #e67e22;
+  border-color: #e67e22;
+}
+
+/* TABELAS */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: var(--cBase01) !important;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ALERTAS */
+
+.alert-success {
+  background-color: var(--success);
+  color: white;
+}
+
+.alert-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.alert-warning {
+  background-color: var(--warning);
+  color: white;
+}
+
+.alert-info {
+  background-color: var(--info);
+  color: white;
+}
+
+/* MODAL */
+
+.modal-header {
+  width: 100%;
+}
+
+.modal-footer {
+  width: 100%;
 }

@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link rel="icon" href="img/umbrella.svg">
   <link rel="stylesheet" href="/clinic_management/public/styles/landing_page/lp.css">
+  <link rel="stylesheet" href="/clinic_management/public/styles/global/global.css">
   <title>Vitta Clinic</title>
 </head>
 

@@ -16,12 +16,14 @@
   line-height: 1.125;
   margin-bottom: 32px;
   font-size: 3.5rem;
+  color: #f7f7f7;
 }
 
 .benefits-title::after {
   content: "";
   width: 160px;
   height: 4px;
+  background-color: #0a5d5d; /* Cor secundária mais escura */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -49,12 +51,14 @@
   margin-top: 24px;
   font-size: 1.75rem;
   line-height: 1.5;
+  color: #f7f7f7; /* Cor clara do tema */
 }
 
 .item-text {
   margin-top: 4px;
   font-size: 1rem;
   line-height: 1.5;
+  color: #f7f7f7; /* Cor clara do tema */
 }
 
 @media (max-width: 1000px) {

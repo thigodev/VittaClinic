@@ -29,6 +29,7 @@ $admins = $adminPadrao->getAll($clinicaId);
 
   <title>Gestão de Administradores - Dashboard</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
+  <link rel="stylesheet" href="/clinic_management/public/styles/global/global.css">
 </head>
 
 <body class="bg-light">
@@ -57,38 +58,44 @@ $admins = $adminPadrao->getAll($clinicaId);
       </button>
     </div>
 
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Email</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach ($admins as $admin): ?>
+    <!-- Exibe mensagem caso não haja administradores cadastrados -->
+    <?php if (empty($admins)): ?>
+      <div class="alert alert-info" role="alert">
+        <strong>Atenção!</strong> Não há administradores cadastrados no momento. Cadastre um administrador para começar.
+      </div>
+    <?php else: ?>
+      <table class="table table-striped table-hover">
+        <thead>
           <tr>
-            <td><?php echo htmlspecialchars($admin['id']); ?></td>
-            <td><?php echo htmlspecialchars($admin['nome']); ?></td>
-            <td><?php echo htmlspecialchars($admin['email']); ?></td>
-            <td>
-              <form method="post" action="/clinic_management/auth/delete_admin.php"
-                onsubmit="return confirm('Você tem certeza que deseja excluir este admin?');">
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($admin['id']); ?>">
-                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center" type="submit"
-                  aria-label="Excluir administrador">
+            <th>#</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($admins as $admin): ?>
+            <tr>
+              <td><?php echo htmlspecialchars($admin['id']); ?></td>
+              <td><?php echo htmlspecialchars($admin['nome']); ?></td>
+              <td><?php echo htmlspecialchars($admin['email']); ?></td>
+              <td>
+                <!-- Botão para abrir o modal de exclusão -->
+                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                  data-bs-toggle="modal" data-bs-target="#modalConfirmarExclusao"
+                  data-id="<?php echo htmlspecialchars($admin['id']); ?>"
+                  data-nome="<?php echo htmlspecialchars($admin['nome']); ?>" aria-label="Excluir administrador">
                   <i class="bi bi-trash" alt="Ícone de excluir administrador"></i>
                 </button>
-              </form>
-            </td>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    <?php endif; ?>
   </div>
 
-  <!-- Modal para Cadastro de Administrador -->
+  <!-- Modal de Cadastro de Administrador -->
   <div class="modal fade" id="modalCadastrarAdmin" tabindex="-1" aria-labelledby="modalCadastrarAdminLabel"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -120,9 +127,47 @@ $admins = $adminPadrao->getAll($clinicaId);
     </div>
   </div>
 
-  <!-- Bootstrap 5 JS and Popper.js -->
+  <!-- Modal de Confirmação de Exclusão -->
+  <div class="modal fade" id="modalConfirmarExclusao" tabindex="-1" aria-labelledby="modalConfirmarExclusaoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalConfirmarExclusaoLabel">Confirmar Exclusão</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Você tem certeza que deseja excluir o administrador <strong id="adminNome"></strong>?</p>
+        </div>
+        <div class="modal-footer">
+          <form method="post" action="/clinic_management/auth/delete_admin.php" id="formExclusaoAdmin">
+            <input type="hidden" name="id" id="adminId">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Script para passar dados para o modal de exclusão
+    const modalExclusao = document.getElementById('modalConfirmarExclusao');
+    modalExclusao.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const adminId = button.getAttribute('data-id');
+      const adminNome = button.getAttribute('data-nome');
+
+      const modalNome = modalExclusao.querySelector('#adminNome');
+      const modalId = modalExclusao.querySelector('#adminId');
+
+      modalNome.textContent = adminNome;
+      modalId.value = adminId;
+    });
+  </script>
 </body>
 
 </html>

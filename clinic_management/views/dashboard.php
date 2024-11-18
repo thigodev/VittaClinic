@@ -14,13 +14,12 @@ $clinicName = $_SESSION['nome'];
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-
     <link rel="icon" href="img/umbrella.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <title>Dashboard - Clínica</title>
     <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
+    <link rel="stylesheet" href="/clinic_management/public/styles/global/geral.css">
+    <title>Dashboard</title>
 </head>
 
 <body class="bg-light">
@@ -71,21 +70,22 @@ $clinicName = $_SESSION['nome'];
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 mb-4">
                 <h4 class="text-secondary">Acesso rápido</h4>
-                <div class="d-flex justify-content-start gap-3">
-                    <a href="adminMasterView.php" class="btn btn-outline-info d-flex align-items-center">
-                        <i class="bi bi-person-plus me-2"></i> Cadastrar Administrador
+                <div class="d-flex justify-content-start gap-3 flex-wrap">
+                    <a href="adminMasterView.php" class="btn btn-outline-primary d-flex align-items-center">
+                        <i class="bi bi-gear-fill me-2"></i>Administradores
                     </a>
-                    <a href="adminView.php" class="btn btn-outline-info d-flex align-items-center">
-                        <i class="bi bi-person-lines-fill me-2"></i> Médicos e Pacientes
+                    <a href="adminDoctorView.php" class="btn btn-outline-primary d-flex align-items-center">
+                        <i class="bi bi-person-fill me-2"></i>Médicos
+                    </a>
+                    <a href="adminPatientsView.php" class="btn btn-outline-primary d-flex align-items-center">
+                        <i class="bi bi-person-badge me-2"></i>Pacientes
                     </a>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 mb-4">
                 <h4 class="text-secondary">Resumo das Atividades Recentes</h4>
