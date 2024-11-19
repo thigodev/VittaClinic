@@ -1,6 +1,23 @@
 <?php
+require_once '../config/Database.php';
+require_once '../classes/AdminPadrao.php';
+require_once '../config/Database.php';
+require_once '../classes/Paciente.php';
+
 session_start();
 $clinicName = $_SESSION['nome'];
+$clinicaId = $_SESSION['id'];
+
+// Contar os administradores
+$adminPadrao = new AdminPadrao(null, null, null, null);
+$admins = $adminPadrao->getAll($clinicaId);
+$adminCount = count($admins);
+
+// Contar os pacientes
+$paciente = new Paciente(null, null, null, null, null, null);
+$pacientes = $paciente->getAll($clinicaId);
+$pacientesCount = count($pacientes);
+
 ?>
 
 <!DOCTYPE html>
@@ -34,17 +51,20 @@ $clinicName = $_SESSION['nome'];
         <h1 class="wellcome-title h3 mb-4 "><?php echo "Bem-vindo, {$clinicName}"; ?></h1>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="card shadow-sm border-primary">
                     <div class="card-body">
-                        <h5 class="card-title text-center ">Administradores</h5>
-                        <p class="card-text text-center"><strong>5</strong> Administradores</p>
+                        <h5 class="card-title text-center">Administradores</h5>
+                        <p class="card-text text-center">
+                            <strong><?php echo $adminCount; ?></strong>
+                            <?php echo ($adminCount == 1) ? 'Administrador Cadastrado' : ($adminCount > 0 ? 'Administradores Cadastrados' : 'Nenhum Registro'); ?>
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-success">
                     <div class="card-body">
                         <h5 class="card-title text-center">Consultas</h5>
                         <p class="card-text text-center"><strong>120</strong> Consultas agendadas</p>
@@ -53,16 +73,18 @@ $clinicName = $_SESSION['nome'];
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-warning">
                     <div class="card-body">
                         <h5 class="card-title text-center">Pacientes</h5>
-                        <p class="card-text text-center"><strong>300</strong> Pacientes registrados</p>
+                        <p class="card-text text-center"><strong><?php echo $pacientesCount; ?></strong>
+                            <?php echo ($pacientesCount == 1) ? 'Paciente Cadastrado' : ($pacientesCount > 0 ? 'Pacientes Cadastrados' : 'Nenhum Registro'); ?>
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-danger">
                     <div class="card-body">
                         <h5 class="card-title text-center">Receitas</h5>
                         <p class="card-text text-center"><strong>R$ 15.000</strong> em receitas mensais</p>
@@ -70,6 +92,8 @@ $clinicName = $_SESSION['nome'];
                 </div>
             </div>
         </div>
+
+
         <div class="row">
             <div class="col-12 mb-4">
                 <h4 class="text-secondary">Acesso rápido</h4>

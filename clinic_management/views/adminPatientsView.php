@@ -1,8 +1,6 @@
 <?php
 require_once '../config/Database.php';
 require_once '../classes/Paciente.php';
-require_once '../classes/Medico.php';
-require_once '../classes/Consulta.php';
 
 session_start();
 
@@ -10,12 +8,6 @@ $clinicaId = $_SESSION['id'];
 
 $paciente = new Paciente(null, null, null, null, null, null);
 $pacientes = $paciente->getAll($clinicaId); // Busca os pacientes
-
-$medico = new Medico(null, null, null, null, null, null);
-$medicos = $medico->getAll($clinicaId);
-
-$consulta = new Consulta(null, null, null, null, null);
-$consultas = $consulta->getAll($clinicaId);
 
 $adminName = $_SESSION['nome'];
 ?>
