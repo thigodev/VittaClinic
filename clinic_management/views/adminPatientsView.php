@@ -67,30 +67,38 @@ $adminName = $_SESSION['nome'];
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Nome</th>
-                        <th>Email</th>
-                        <th>Data de Nascimento</th>
-                        <th>Sexo</th>
+                        <th>E-mail</th>
+                        <th>Nascimento</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($pacientes as $paciente): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($paciente['id']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['nome']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['email']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['data_nascimento']); ?></td>
-                            <td><?php echo htmlspecialchars($paciente['sexo']); ?></td>
                             <td>
-                                <!-- Botão para abrir o modal de confirmação de exclusão -->
-                                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
-                                    data-bs-toggle="modal" data-bs-target="#modalConfirmarExclusao"
-                                    data-id="<?php echo htmlspecialchars($paciente['id']); ?>"
-                                    data-nome="<?php echo htmlspecialchars($paciente['nome']); ?>">
-                                    <i class="bi bi-trash" alt="Ícone de excluir paciente"></i>
-                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+                                    <ul class="dropdown-menu disabled" aria-labelledby="dropdownMenuButton">
+                                        <!-- <li><a class="dropdown-item"
+                                                href="editar_medico.php?id=<?php echo htmlspecialchars($paciente['id']); ?>">
+                                                <i class="bi bi-pencil"></i> Editar</a></li>
+                                        <li> -->
+                                        <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#modalConfirmarExclusao"
+                                            data-id="<?php echo htmlspecialchars($paciente['id']); ?>"
+                                            data-nome="<?php echo htmlspecialchars($paciente['nome']); ?>">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -111,35 +119,42 @@ $adminName = $_SESSION['nome'];
                 <div class="modal-body">
                     <form method="post" action="/clinic_management/auth/register_paciente.php">
                         <div class="mb-3">
-                            <label for="paciente_name" class="form-label">Nome do Paciente</label>
+                            <label for="paciente_name" class="form-label">Paciente <strong
+                                    class="danger">*</strong></label>
                             <input type="text" class="form-control" id="paciente_name" name="paciente_name"
-                                placeholder="Nome*" required>
+                                placeholder="Informe o nome completo do(a) paciente" maxlength="100" required>
                         </div>
                         <div class="mb-3">
-                            <label for="paciente_dt" class="form-label">Data de Nascimento</label>
-                            <input type="date" class="form-control" id="paciente_dt" name="paciente_dt"
-                                placeholder="Data de nascimento*" required>
+                            <label for="paciente_dt" class="form-label">Data de Nascimento <strong
+                                    class="danger">*</strong></label>
+                            <input type="date" class="form-control" id="paciente_dt" name="paciente_dt" required>
                         </div>
                         <div class="mb-3">
-                            <label for="paciente_sexo" class="form-label">Sexo</label>
-                            <select id="paciente_sexo" name="paciente_sexo" class="form-select" required>
+                            <label for="paciente_sexo" class="form-label">Sexo (Opcional)</label>
+                            <select id="paciente_sexo" name="paciente_sexo" class="form-select">
                                 <option value="m">Masculino</option>
                                 <option value="f">Feminino</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="paciente_email" class="form-label">Email</label>
+                            <label for="paciente_email" class="form-label">E-mail <strong
+                                    class="danger">*</strong></label>
                             <input type="email" class="form-control" id="paciente_email" name="paciente_email"
-                                placeholder="Email*" required>
+                                placeholder="Exemplo: vitta@gmail.com" maxlength="100" required>
                         </div>
                         <div class="mb-3">
-                            <label for="paciente_senha" class="form-label">Senha</label>
+                            <label for="paciente_senha" class="form-label">Senha <strong
+                                    class="danger">*</strong></label>
                             <input type="password" class="form-control" id="paciente_senha" name="paciente_senha"
-                                placeholder="Senha*" required>
+                                placeholder="Senha de no mínimo 8 caracteres" maxlength="20" required>
                         </div>
                         <input type="hidden" name="clinica_id" value="<?php echo htmlspecialchars($_SESSION['id']); ?>">
-                        <button type="submit" class="btn btn-primary w-100"
-                            aria-label="Cadastrar Paciente">Cadastrar</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline" aria-label="Fechar"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary"
+                                aria-label="Cadastrar Médico">Cadastrar</button>
+                        </div>
                     </form>
                 </div>
             </div>
