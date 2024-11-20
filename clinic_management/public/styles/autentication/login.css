@@ -1,1 +1,164 @@
-@import "./form.css";
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+}
+
+.form-inner-container {
+  background: white;
+  padding: 3rem 5rem;
+  border: 1px solid #0b8b7b;
+  box-shadow: 4px 4px 15px 4px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.top-form-container-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  top: -10%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+  opacity: 90%;
+  filter: brightness(0.5);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-container,
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-video {
+  color: white;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+  padding: 1rem;
+}
+
+.sign-in-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.error-message {
+  margin-top: 15px;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+select,
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #137776;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #0a5d5d;
+}
+
+.back-to-dashboard {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-to-dashboard a {
+  font-size: 14px;
+  color: #0a5d5d;
+  text-decoration: none;
+}
+
+.back-to-dashboard a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .form-inner-container {
+    padding: 1rem;
+  }
+
+  .login-container {
+    flex-direction: column; /* No mobile, a direção será vertical */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 90%; /* Formulário ocupa 90% da largura da tela */
+    margin-bottom: 20px;
+  }
+
+  .video-container {
+    display: none;
+  }
+
+  .sign-in-title {
+    text-align: center;
+  }
+
+  .form-container select,
+  .form-container input {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-container,
+  .video-container {
+    width: 50%;
+  }
+
+  .video-container {
+    background-color: #000;
+    height: 100%;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir o espaço do bloco */
+  }
+}

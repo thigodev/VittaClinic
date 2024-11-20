@@ -27,9 +27,9 @@ $admins = $adminPadrao->getAll($clinicaId);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <title>Gestão de Administradores - Dashboard</title>
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
   <link rel="stylesheet" href="/clinic_management/public/styles/global/global.css">
+  <title>Gestão de Administradores - Dashboard</title>
 </head>
 
 <body class="bg-light">
@@ -46,7 +46,7 @@ $admins = $adminPadrao->getAll($clinicaId);
       opção de cadastrar novos administradores ou excluir os existentes. Utilize o botão abaixo para adicionar um novo
       administrador.</p>
 
-    <a href="dashboard.php" class="btn btn-secondary mb-4">
+    <a href="dashboardClinicView.php" class="btn btn-secondary mb-4">
       <i class="bi bi-arrow-left-circle"></i> Voltar para o Dashboard
     </a>
 
@@ -67,7 +67,6 @@ $admins = $adminPadrao->getAll($clinicaId);
       <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th>#</th>
             <th>Nome</th>
             <th>E-mail</th>
             <th>Ações</th>
@@ -76,17 +75,27 @@ $admins = $adminPadrao->getAll($clinicaId);
         <tbody>
           <?php foreach ($admins as $admin): ?>
             <tr>
-              <td><?php echo htmlspecialchars($admin['id']); ?></td>
               <td><?php echo htmlspecialchars($admin['nome']); ?></td>
               <td><?php echo htmlspecialchars($admin['email']); ?></td>
               <td>
-                <!-- Botão para abrir o modal de exclusão -->
-                <button class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
-                  data-bs-toggle="modal" data-bs-target="#modalConfirmarExclusao"
-                  data-id="<?php echo htmlspecialchars($admin['id']); ?>"
-                  data-nome="<?php echo htmlspecialchars($admin['nome']); ?>" aria-label="Excluir administrador">
-                  <i class="bi bi-trash" alt="Ícone de excluir administrador"></i>
-                </button>
+                <div class="dropdown">
+                  <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button"
+                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                  <ul class="dropdown-menu disabled" aria-labelledby="dropdownMenuButton">
+                    <!-- <li><a class="dropdown-item"
+                                                href="editar_medico.php?id=<?php echo htmlspecialchars($admin['id']); ?>">
+                                                <i class="bi bi-pencil"></i> Editar</a></li>
+                                        <li> -->
+                    <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                      data-bs-target="#modalConfirmarExclusao" data-id="<?php echo htmlspecialchars($admin['id']); ?>"
+                      data-nome="<?php echo htmlspecialchars($admin['nome']); ?>">
+                      <i class="bi bi-trash"></i> Excluir
+                    </a>
+                    </li>
+                  </ul>
+                </div>
               </td>
             </tr>
           <?php endforeach; ?>

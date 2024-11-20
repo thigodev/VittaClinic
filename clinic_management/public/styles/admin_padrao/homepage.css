@@ -3,25 +3,6 @@
 @import "../global/modal.css";
 @import "./tables.css";
 
-header {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #137776;
-  margin-top: 32px;
-  border-radius: 8px;
-}
-
-.header-menu-admin {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
 .exit-session-btn {
   background-color: transparent;
   font-size: 1rem;
@@ -103,7 +84,7 @@ th {
   padding: 8px;
   text-align: left;
   background-color: #137776;
-  font-family: 'roboto';
+  font-family: "roboto";
   font-weight: lighter;
 }
 

@@ -42,7 +42,7 @@ $adminName = $_SESSION['nome'];
         <h1 class="wellcome-title h3 mb-4"><?php echo htmlspecialchars("Gestão de Médicos"); ?></h1>
         <p class="text-muted mb-4">Nesta página, você pode visualizar e gerenciar os médicos da clínica. Você pode
             cadastrar novos médicos ou excluir os existentes. Utilize o botão abaixo para adicionar um novo médico.</p>
-        <a href="dashboard.php" class="btn btn-secondary mb-4">
+        <a href="dashboardClinicView.php" class="btn btn-secondary mb-4">
             <i class="bi bi-arrow-left-circle"></i> Voltar para Dashboard
         </a>
         <div class="d-flex justify-content-between align-items-center mb-4">

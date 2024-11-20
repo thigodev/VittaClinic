@@ -46,7 +46,7 @@ $adminName = $_SESSION['nome'];
         <p class="text-muted mb-4">Aqui você pode visualizar e gerenciar os pacientes da clínica. Utilize o botão abaixo
             para cadastrar novos pacientes ou excluir os existentes.</p>
 
-        <a href="dashboard.php" class="btn btn-secondary mb-4">
+        <a href="dashboardClinicView.php" class="btn btn-secondary mb-4">
             <i class="bi bi-arrow-left-circle"></i> Voltar para o Dashboard
         </a>
 

@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_start();
             $_SESSION['nome'] = $clinicName;
             $_SESSION['id'] = $user['id'];
-            header('Location: /clinic_management/views/dashboard.php?clinicName=' . urlencode($clinicName));
+            header('Location: /clinic_management/views/dashboardClinicView.php?clinicName=' . urlencode($clinicName));
             exit();
           case 'admin':
             $adminName = $user['nome'];
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['nome'] = $medicoName;
             $_SESSION['crm'] = $user['crm'];
             $_SESSION['id'] = $user['clinica_id'];
-            header('Location: /clinic_management/views/medicoView.php');
+            header('Location: /clinic_management/views/dashboardDoctorView.php');
             exit();
           case 'paciente':
             $pacienteName = $user['nome'];

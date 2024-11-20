@@ -31,30 +31,12 @@ $adminName = $_SESSION['nome'];
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="icon" href="../public/img/favicon.ico">
-  <title>Clinica - Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/clinic_management/public/styles/admin_master/admin_master.css">
+  <link rel="stylesheet" href="/clinic_management/public/styles/global/global.css">
   <link rel="stylesheet" href="/clinic_management/public/styles/admin_padrao/homepage.css">
-  <style>
-    .sign-up-btn-modal {
-      background-color: #137776;
-      border: none;
-    }
-
-    .sign-up-btn-modal:hover {
-      background-color: #0a5d5d;
-    }
-
-    .input-container input:required {
-      border: 2px solid #137776;
-    }
-
-    .input-container input:invalid {
-      border: 2px solid red;
-    }
-
-    .input-container input:valid {
-      border: 2px solid green;
-    }
-  </style>
+  <title>Dashboard - Recepcionista</title>
 </head>
 
 <body>
