@@ -44,6 +44,10 @@
   font-style: normal;
 }
 
+.strong-primary {
+  color: var(--cBase01);
+}
+
 /* COR DO TEXTO */
 
 .cBase01 {

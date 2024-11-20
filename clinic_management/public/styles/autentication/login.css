@@ -10,6 +10,7 @@ body {
 }
 
 .form-inner-container {
+  max-width: 450px;
   background: white;
   padding: 3rem 5rem;
   border: 1px solid #0b8b7b;
@@ -27,10 +28,10 @@ body {
 }
 
 .login-container {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .video-container {
@@ -41,6 +42,7 @@ body {
 .form-container {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   justify-content: space-between;
 }
 
@@ -54,7 +56,7 @@ body {
 
 .info-video {
   color: white;
-  background: transparent;
+  background: none;
   position: absolute;
   bottom: 0;
   z-index: 99999;
@@ -115,15 +117,39 @@ button.btn-primary:hover {
   text-decoration: underline;
 }
 
+.input-container {
+  position: relative;
+}
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 65%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.forgot-password {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.forgot-password i {
+  margin-right: 5px;
+}
+
 @media (max-width: 768px) {
   .form-inner-container {
     padding: 1rem;
   }
 
   .login-container {
-    flex-direction: column; /* No mobile, a direção será vertical */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
   }
 
   .form-container {
