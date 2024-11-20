@@ -3,6 +3,8 @@ require_once '../config/Database.php';
 require_once '../classes/AdminPadrao.php';
 require_once '../config/Database.php';
 require_once '../classes/Paciente.php';
+require_once '../classes/Consulta.php';
+
 
 session_start();
 $clinicName = $_SESSION['nome'];
@@ -17,6 +19,12 @@ $adminCount = count($admins);
 $paciente = new Paciente(null, null, null, null, null, null);
 $pacientes = $paciente->getAll($clinicaId);
 $pacientesCount = count($pacientes);
+
+// Contar consultas
+$consulta = new Consulta(null, null, null, null, null);
+$consultas = $consulta->getAll($clinicaId);
+$consultasCount = count($consultas);
+
 
 ?>
 
@@ -51,43 +59,36 @@ $pacientesCount = count($pacientes);
         <h1 class="wellcome-title h3 mb-4 "><?php echo "Bem-vindo, {$clinicName}"; ?></h1>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card shadow-sm border-primary">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Administradores</h5>
+                        <h5 class="card-title text-center">Total de Administradores</h5>
                         <p class="card-text text-center">
                             <strong><?php echo $adminCount; ?></strong>
-                            <?php echo ($adminCount == 1) ? 'Administrador Cadastrado' : ($adminCount > 0 ? 'Administradores Cadastrados' : 'Nenhum Registro'); ?>
+                            <?php echo ($adminCount == 1) ? 'Administrador Cadastrado' : ($adminCount > 0 ? 'Administradores Cadastrados' : 'Nenhum Cadastro'); ?>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card shadow-sm border-success">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Consultas</h5>
-                        <p class="card-text text-center"><strong>120</strong> Consultas agendadas</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm border-warning">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Pacientes</h5>
-                        <p class="card-text text-center"><strong><?php echo $pacientesCount; ?></strong>
-                            <?php echo ($pacientesCount == 1) ? 'Paciente Cadastrado' : ($pacientesCount > 0 ? 'Pacientes Cadastrados' : 'Nenhum Registro'); ?>
+                        <h5 class="card-title text-center">Total de Consultas</h5>
+                        <p class="card-text text-center"><strong><?php echo $consultasCount; ?></strong>
+                            <?php echo ($pacientesCount == 1) ? 'Consulta cadastrada' : ($consultasCount > 0 ? 'Consultas Cadastradas' : 'Nenhum Cadastro'); ?>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card shadow-sm border-danger">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card shadow-sm border-warning">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Receitas</h5>
-                        <p class="card-text text-center"><strong>R$ 15.000</strong> em receitas mensais</p>
+                        <h5 class="card-title text-center">Total de Pacientes</h5>
+                        <p class="card-text text-center"><strong><?php echo $pacientesCount; ?></strong>
+                            <?php echo ($pacientesCount == 1) ? 'Paciente Cadastrado' : ($pacientesCount > 0 ? 'Pacientes Cadastrados' : 'Nenhum Cadastro'); ?>
+                        </p>
                     </div>
                 </div>
             </div>
