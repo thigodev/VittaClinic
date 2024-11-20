@@ -90,6 +90,11 @@
   color: var(--info);
 }
 
+.password-error {
+  color: var(--danger);
+  font-size: 12px;
+}
+
 /* RESET DE ESTILOS */
 
 * {
@@ -324,4 +329,8 @@ table tbody tr:hover {
 .alert-info {
   background-color: var(--info);
   color: white;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }

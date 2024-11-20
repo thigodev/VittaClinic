@@ -1,112 +1,194 @@
-/* Importação de arquivos globais */
-@import "../global/geral.css";
-@import "./form.css";
-
-/* Header */
-header {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  padding: 20px 90px;
-  background: #137776;
-}
-
-/* Centralização do conteúdo principal */
-section {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px;
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background: #fafafa;
 }
 
-/* Título */
-.sign-up-title {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
+a {
+  text-decoration: none;
+  color: var(--cBase01);
 }
 
-.detail {
-  color: #137776;
+a:hover {
+  text-decoration: underline;
 }
 
-/* Containers de Input */
-.input-container {
+/* Container principal */
+.register-container {
+  display: flex;
+  height: 100vh;
   width: 100%;
+}
+
+.footer-form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.side-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cBase01); /* Cor primária */
+  color: white;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.impact-text {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--warning); /* Destaque em cor secundária */
+}
+
+/* Formulário */
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 3rem 5rem;
+  border: 1px solid #0b8b7b;
+  box-shadow: 4px 4px 15px 4px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.form-header {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-/* Labels */
-label {
-  display: block;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 8px;
+.register-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--cBase02);
+  text-align: center;
 }
 
-/* Inputs */
-input {
-  width: 100%;
+.register-description {
+  font-size: 14px;
+  text-align: center;
+  color: var(--cTextSecondary);
+}
+
+/* Formulário */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-label {
+  font-size: 14px;
+  color: var(--cTextPrimary);
+  margin-bottom: 5px;
+}
+
+.input-field {
   padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: var(--cTextPrimary);
+  width: 100%;
+}
+
+.input-field:focus {
+  border-color: var(--cBase01);
   outline: none;
-  transition: border 0.3s;
 }
 
-input:focus {
-  border-color: #137776;
+.required {
+  color: var(--danger);
 }
 
-/* Placeholder */
-input::placeholder {
-  color: #999;
-  font-style: italic;
+.eye-icon {
+  position: absolute;
+  cursor: pointer;
+  right: 4%;
+  top: 55%;
 }
 
-/* Botão de envio */
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #137776;
+.register-btn {
+  background-color: var(--cBase01);
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #005fa3;
+.register-btn:hover {
+  background-color: var(--cBase02);
 }
 
-button:active {
-  background-color: #00497a;
+/* Links adicionais */
+.additional-links {
+  text-align: center;
+  margin-top: 30px;
+  position: absolute;
+  top: 1;
+  padding-left: 2rem;
 }
 
-/* Estilos responsivos */
-@media (max-width: 600px) {
-  section {
+.additional-links p {
+  font-size: 14px;
+  color: var(--cTextPrimary);
+}
+
+.additional-links a {
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .form-section {
+    flex-direction: column;
     padding: 20px;
   }
 
-  .sign-up-title {
-    font-size: 28px;
-    margin-bottom: 20px;
+  .side-container {
+    display: none;
   }
 
-  button {
-    font-size: 14px;
+  .form-container {
     padding: 10px;
   }
 }
