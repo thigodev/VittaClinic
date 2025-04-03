@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   top: 0;
-  background: transparent;
+  background: #ffffff;
   transition: background 0.3s, color 0.3s;
   z-index: 999;
 }

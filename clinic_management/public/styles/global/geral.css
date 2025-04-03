@@ -1,12 +1,12 @@
 :root {
-  --cBase01: #137776;
-  --cBase02: #0a5d5d;
+  --cBase01: #EC6C1E;
+  --cBase02: #EC6C1E;
   --cBase03: #0b8b7b;
   --cBackground: #f3f3f3;
   --cTextPrimary: #333333;
   --cTextSecondary: #666666;
   --cTextLight: #b0b0b0;
-  --success: #EC6C1E;
+  --success: #f77222;
   --danger: #d9534f;
   --warning: #f0ad4e;
   --info: #5bc0de;

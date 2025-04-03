@@ -59,7 +59,7 @@ input,
 input:focus,
 #user_type:focus,
 #paciente_sexo:focus {
-  border-color: #137776;
+  border-color: #EC6C1E;
   outline: none;
 }
 
@@ -69,7 +69,7 @@ input::placeholder {
 }
 
 input:required:valid {
-  border-color: #137776;
+  border-color: #EC6C1E;
 }
 
 /* Botão de Submissão */
