@@ -44,7 +44,7 @@
 }
 
 .create-btn {
-  background-color: #137776;
+  background-color: #EC6C1E;
   padding: 8px 48px;
   border-radius: 8px;
   font-size: 0.875rem;
@@ -83,7 +83,7 @@ table.active {
 th {
   padding: 8px;
   text-align: left;
-  background-color: #137776;
+  background-color: #EC6C1E;
   font-family: "roboto";
   font-weight: lighter;
 }

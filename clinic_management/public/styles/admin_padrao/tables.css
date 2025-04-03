@@ -22,7 +22,7 @@
 }
 
 .tables-change-btns button.active {
-  background-color: #137776;
+  background-color: #EC6C1E;
   color: var(--c01);
   border: 2px solid transparent;
 }

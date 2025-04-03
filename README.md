@@ -63,3 +63,29 @@ Você pode:
 ---
 
 Agradecemos pelo interesse de quem quiser colaborar com o projeto! 🎉
+
+
+
+
+
+Informações video:
+
+Clínica 
+
+login: caririodonto@gmail.com
+senha: @jQ0i3-1"jrM
+
+Administrador
+
+login: yuri@gmail.com
+senha: 123
+
+Médico
+
+login: matheusmed@gmail.com
+senha: x9_q3OB43Af£
+
+Paciente
+
+login: vitorsamp@gmail.com
+senha: *dn(J1S3x5}%

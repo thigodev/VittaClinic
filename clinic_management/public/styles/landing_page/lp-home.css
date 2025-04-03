@@ -33,7 +33,7 @@ header {
 }
 
 .home-title {
-  color: #137776;
+  color: #EC6C1E;
   font-style: normal;
   font-size: 70px;
   font-weight: 500;
@@ -53,7 +53,7 @@ header {
   width: fit-content;
   height: 50px;
   border-radius: 8px;
-  background: linear-gradient(90deg, #137776 0%, #23dddb 100%);
+  background: #EC6C1E;
   display: flex;
   color: white;
   padding: 8px 48px;

@@ -3,7 +3,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #137776;
+  background-color: #EC6C1E;
   margin-top: 32px;
   border-radius: 8px;
 }
@@ -36,13 +36,13 @@ header {
   content: "";
   width: 160px;
   height: 4px;
-  background-color: #137776;
+  background-color: #EC6C1E;
   display: block;
   margin-top: 16px;
 }
 
 .create-btn {
-  background-color: #137776;
+  background-color: #EC6C1E;
   padding: 8px 48px;
   border-radius: 8px;
   font-size: 0.875rem;
@@ -52,7 +52,7 @@ header {
 }
 
 .create-btn:hover {
-  background-color: #137776;
+  background-color: #EC6C1E;
 }
 
 table {
@@ -76,7 +76,7 @@ table {
 th {
   padding: 8px;
   text-align: left;
-  background-color: #137776;
+  background-color: #EC6C1E;
   font-family: "roboto";
   font-weight: lighter;
 }

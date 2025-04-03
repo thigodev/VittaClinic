@@ -12,7 +12,7 @@
   content: "";
   width: 160px;
   height: 4px;
-  background-color: #137776;
+  background-color: #EC6C1E;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -78,7 +78,7 @@ input:required:valid {
   padding: 16px 10px;
   width: 100%;
   margin-top: 32px;
-  background-color: #137776;
+  background-color: #EC6C1E;
   border-radius: 8px;
   font-size: 1.125rem;
   color: #fff;
