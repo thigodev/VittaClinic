@@ -16,10 +16,10 @@
 
 <body>
   <header class="header" id="header">
-    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo">
+    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo" style="width:150px">
     <nav>
       <ul class="header-menu">
-        <li><a href="#about">Sobre Nós</a></li>
+        <li><a href="#about">Sobre Nós</a></li  >
         <li><a href="#benefits">Vantagens</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -48,7 +48,7 @@
           todos os aspectos da operação clínica. </p>
         <p>Atuamos principalmente na cidade de Juazeiro do Norte, atendendo às demandas das clínicas locais.</p>
       </div>
-      <img src="/clinic_management/public/img/banner-about.png" width="600px">
+      <img src="/clinic_management/public/img/banner-about.svg" width="600px">
     </div>
   </section>
 
