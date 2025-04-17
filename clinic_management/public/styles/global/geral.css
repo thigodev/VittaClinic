@@ -30,12 +30,15 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
+  color:rgb(21, 21, 21);
 }
 
 .roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-style: normal;
+  margin-right: 1rem;
+  color: black;
 }
 
 .roboto-medium {
@@ -327,7 +330,7 @@ table tbody tr:hover {
 }
 
 .alert-info {
-  background-color: var(--info);
+  background-color:#e67e22 ;
   color: white;
 }
 

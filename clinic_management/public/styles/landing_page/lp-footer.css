@@ -53,7 +53,7 @@
   line-height: 1.5;
   grid-column: 1/-1;
   text-align: center;
-  color: var(--cText);
+  color: #FFFFFF;
 }
 
 @media (max-width: 800px) {

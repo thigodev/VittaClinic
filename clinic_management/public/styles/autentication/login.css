@@ -14,7 +14,7 @@ body {
   max-width: 450px;
   background: white;
   padding: 3rem 5rem;
-  border: 1px solid #0b8b7b;
+  border: 1px solid #EC6C1E;
   box-shadow: 4px 4px 15px 4px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -100,7 +100,7 @@ button.btn-primary {
 }
 
 button.btn-primary:hover {
-  background-color: #0a5d5d;
+  background-color: #d5641e;
 }
 
 .back-to-dashboard {
@@ -110,7 +110,7 @@ button.btn-primary:hover {
 
 .back-to-dashboard a {
   font-size: 14px;
-  color: #0a5d5d;
+  color: #EC6C1E;
   text-decoration: none;
 }
 

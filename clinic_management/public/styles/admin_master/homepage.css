@@ -4,8 +4,7 @@ header {
   align-items: center;
   padding: 20px;
   background-color: #EC6C1E;
-  margin-top: 32px;
-  border-radius: 8px;
+
 }
 
 .header-master {
@@ -55,6 +54,8 @@ header {
   background-color: #EC6C1E;
 }
 
+
+
 table {
   width: 100%;
   margin-top: 16px;
@@ -62,7 +63,7 @@ table {
 }
 
 .registro {
-  height: 40px;
+  height: 10px;
 }
 
 .registro:nth-child(even) {
@@ -76,7 +77,7 @@ table {
 th {
   padding: 8px;
   text-align: left;
-  background-color: #EC6C1E;
+  background-color: #ffffff;
   font-family: "roboto";
   font-weight: lighter;
 }

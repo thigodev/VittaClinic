@@ -16,7 +16,7 @@
 
 <body>
   <header class="header" id="header">
-    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo" style="width:150px">
+    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo" >
     <nav>
       <ul class="header-menu">
         <li><a href="#about">Sobre Nós</a></li  >

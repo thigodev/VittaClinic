@@ -73,7 +73,7 @@ a:hover {
   max-width: 450px;
   background: white;
   padding: 3rem 5rem;
-  border: 1px solid #0b8b7b;
+  border: 2px solid #d0600b;
   box-shadow: 4px 4px 15px 4px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
 }
