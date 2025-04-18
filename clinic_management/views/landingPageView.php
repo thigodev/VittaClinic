@@ -139,6 +139,7 @@
 
   <script src="/clinic_management/public/scripts/lp.js"></script>
   <script src="/clinic_management/public/scripts/header.js"></script>
+  <script src="/clinic_management/public/scripts/logo.js"></script>
 </body>
 
 </html>
