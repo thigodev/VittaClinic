@@ -33,7 +33,7 @@ header {
 }
 
 .home-title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-style: normal;
   font-size: 70px;
   font-weight: 500;
@@ -53,7 +53,7 @@ header {
   width: fit-content;
   height: 50px;
   border-radius: 8px;
-  background: #EC6C1E;
+  background: #ec6c1e;
   display: flex;
   color: white;
   padding: 8px 48px;
@@ -68,4 +68,23 @@ header {
 
 .home-btn:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .home-content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home-title {
+    font-size: 15px;
+    line-height: 1.8px;
+  }
+  .home-btn {
+    font-size: 15px;
+  }
 }
