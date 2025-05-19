@@ -14,13 +14,6 @@
 
 .header.scrolled {
   background: #ec6c1e;
-  color: black;
-}
-
-.header nav {
-  display: flex;
-  align-items: center;
-  gap: 48px;
 }
 
 .header-menu.scrolled {
@@ -43,54 +36,108 @@
   transform: translateY(-4px);
 }
 
-.login-mobile {
-  background-color: #ec6c1e;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  color: var(--c01);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.856rem;
-  cursor: pointer;
-}
-
 .nav-btn {
   border-radius: 8px;
   border: 1px solid #000000;
   color: #000000;
   display: flex;
-  padding: 8px 48px;
   width: 150px;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.7;
+  align-items: center;
   transition: 0.2s ease;
+  margin-left: 1rem;
 }
 
 .nav-btn:hover {
   border: 1px solid #000000;
 }
 
+/* Botão de menu mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Estilos para tablets e desktops */
 @media (min-width: 800px) {
+  .menu-toggle {
+    display: none;
+  }
+
   .login-mobile {
     display: none;
   }
+
+  .header {
+    padding: 20px 200px;
+  }
+
+  .header nav {
+    display: flex !important;
+  }
 }
 
+/* Estilos para dispositivos móveis */
 @media (max-width: 800px) {
-  .login-mobile {
-    display: flex;
+  .menu-toggle {
+    display: block;
+    color: #000;
+    z-index: 1000;
+  }
+
+  .header {
+    padding: 16px 32px;
+    flex-wrap: wrap;
   }
 
   .header nav {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    padding: 16px 0;
+  }
+
+  .header nav.open {
+    display: flex;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .nav-btn {
+    width: calc(100% - 32px);
+    padding: 8px 16px;
+    align-items: center;
+    text-align: center;
+    margin: 0 16px;
+  }
+
+  .login-mobile {
+    display: flex;
   }
 }
 
+/* Estilos adicionais para telas muito pequenas */
 @media (max-width: 500px) {
   .header-logo {
     display: none;
+  }
+
+  .header {
+    padding: 12px 16px;
+  }
+
+  .login-mobile {
+    font-size: 0.75rem;
+    padding: 6px 12px;
   }
 }

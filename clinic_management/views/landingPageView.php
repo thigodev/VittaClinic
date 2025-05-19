@@ -16,10 +16,11 @@
 
 <body>
   <header class="header" id="header">
-    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo" >
+    <img class="header-logo" src="/clinic_management/public/img/vitta-logo-header.svg" alt="Logo">
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
     <nav>
       <ul class="header-menu">
-        <li><a href="#about">Sobre Nós</a></li  >
+        <li><a href="#about">Sobre Nós</a></li>
         <li><a href="#benefits">Vantagens</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
