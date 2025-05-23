@@ -49,7 +49,16 @@ class Consulta
   {
     try {
       $conn = Database::getConn();
-      $stmt = $conn->prepare("SELECT * FROM consulta WHERE clinica_id = ?");
+      $stmt = $conn->prepare("
+        SELECT 
+          id, 
+          paciente_email, 
+          medico_crm, 
+          data_consulta AS data, 
+          horario_consulta AS horario 
+        FROM consulta 
+        WHERE clinica_id = ?
+      ");
       $stmt->execute([$clinicaId]);
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {

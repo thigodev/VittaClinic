@@ -9,12 +9,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $horario = filter_input(INPUT_POST, 'horario');
   $clinicaId = filter_input(INPUT_POST, 'clinica_id');
 
-  if ($pacienteEmail && $medicoCRM && $data && $horario) {
+  // Validação dos campos obrigatórios
+  if (!$pacienteEmail || !$medicoCRM || !$data || !$horario) {
+    die("Erro: Todos os campos são obrigatórios. Verifique se 'data' e 'horário' foram preenchidos.");
+  }
+
+  // Criação da consulta
+  try {
     $consulta = new Consulta($pacienteEmail, $medicoCRM, $data, $horario, $clinicaId);
     $consulta->create();
-    header('Location: /clinic_management/views/adminView.php');
+
+    // Redirecionamento para a página anterior (mantém o usuário na tela de origem)
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
-  } else {
-    die("Error: All fields are required.");
+  } catch (Exception $e) {
+    die("Erro ao criar consulta: " . $e->getMessage());
   }
 }

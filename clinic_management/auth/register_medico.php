@@ -12,17 +12,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $medicoPassword = $_POST['medico_senha'];
     $clinicaId = filter_input(INPUT_POST, 'clinica_id');
 
-    // Verifique se $adminName está definido na sessão
-    $adminName = isset($_SESSION['admin_name']) ? $_SESSION['admin_name'] : null;
-
     if ($medicoName && $medicoEmail && $medicoEspecialidade && $medicoPassword) {
         $medico = new Medico($medicoName, $medicoEmail, $medicoEspecialidade, $medicoCRM, $medicoPassword, $clinicaId);
         $medico->cadastrar();
 
-        // Redirecione, assegurando que $adminName está definido
-        header('Location: /clinic_management/views/adminDoctorView.php?adminName=' . urlencode($adminName));
-        exit(); // Adicione exit após o redirecionamento
+        // Exiba uma mensagem de sucesso (opcional)
+        $_SESSION['success_message'] = "Médico cadastrado com sucesso!";
     } else {
-        die("Error: All fields are required.");
+        // Exiba uma mensagem de erro (opcional)
+        $_SESSION['error_message'] = "Erro: Todos os campos são obrigatórios.";
     }
 }
+
+// Recarregue a página atual para limpar o formulário
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+exit();
