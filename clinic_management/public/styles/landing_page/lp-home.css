@@ -77,13 +77,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
   }
 
   .home-title {
-    font-size: 15px;
-    line-height: 1.8px;
+    font-size: 25px;
+    line-height: 35px;
   }
+
+  .home-text {
+    font-size: 20px;
+  }
+
   .home-btn {
     font-size: 15px;
   }

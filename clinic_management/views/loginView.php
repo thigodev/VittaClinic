@@ -16,11 +16,7 @@
 
   <main class="login-container">
     <section class="video-container">
-      <video autoplay muted loop>
-        <source src="../public/img/video-login.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-      </video>
-      <p class="info-video">©Direitos reservados - Vitta Clinic 2024</p>
+      <p class="info-video">©Direitos reservados - Vitta Clinic 2025</p>
     </section>
 
     <section class="form-container">

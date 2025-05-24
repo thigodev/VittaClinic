@@ -24,7 +24,7 @@
         <li><a href="#benefits">Vantagens</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="nav-btn" href="/clinic_management/views/loginView.php">LOGIN</a>
+      <a class="nav-btn" href="/clinic_management/views/loginView.php">Login</a>
     </nav>
   </header>
 

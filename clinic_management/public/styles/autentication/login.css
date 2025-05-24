@@ -14,7 +14,7 @@ body {
   max-width: 450px;
   background: white;
   padding: 3rem 5rem;
-  border: 1px solid #EC6C1E;
+  border: 1px solid #ec6c1e;
   box-shadow: 4px 4px 15px 4px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -36,8 +36,8 @@ body {
 }
 
 .video-container {
-  opacity: 90%;
-  filter: brightness(0.5);
+  background-image: url("../../img/hero-initial-login.png");
+  background-position: center;
 }
 
 .form-container {
@@ -91,7 +91,7 @@ select,
 button.btn-primary {
   width: 100%;
   padding: 12px;
-  background-color: #EC6C1E;
+  background-color: #ec6c1e;
   color: white;
   font-size: 16px;
   border: none;
@@ -110,7 +110,7 @@ button.btn-primary:hover {
 
 .back-to-dashboard a {
   font-size: 14px;
-  color: #EC6C1E;
+  color: #ec6c1e;
   text-decoration: none;
 }
 
