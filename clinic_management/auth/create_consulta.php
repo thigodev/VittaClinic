@@ -11,15 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Validação dos campos obrigatórios
   if (!$pacienteEmail || !$medicoCRM || !$data || !$horario) {
-    die("Erro: Todos os campos são obrigatórios. Verifique se 'data' e 'horário' foram preenchidos.");
+    die("Erro: Todos os campos são obrigatórios.");
+  }
+
+  // Validação para não permitir datas anteriores
+  if (strtotime($data) < strtotime(date('Y-m-d'))) {
+    die("Erro: Não é permitido agendar consultas para datas anteriores a hoje.");
   }
 
   // Criação da consulta
   try {
     $consulta = new Consulta($pacienteEmail, $medicoCRM, $data, $horario, $clinicaId);
     $consulta->create();
-
-    // Redirecionamento para a página anterior (mantém o usuário na tela de origem)
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   } catch (Exception $e) {

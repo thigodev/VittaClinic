@@ -12,6 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pacientePassword = $_POST['paciente_senha'];
     $clinicaId = filter_input(INPUT_POST, 'clinica_id');
 
+    // Validação para não aceitar datas futuras
+    if (strtotime($pacienteDt) > strtotime(date('Y-m-d'))) {
+        $_SESSION['error_message'] = "Erro: A data de nascimento não pode ser no futuro.";
+        header('Location: /clinic_management/views/adminPatientsView.php');
+        exit;
+    }
+
     if ($pacienteName && $pacienteEmail && $pacienteDt && $pacienteSexo && $pacientePassword) {
         $paciente = new Paciente($pacienteName, $pacienteEmail, $pacienteDt, $pacienteSexo, $pacientePassword, $clinicaId);
         $paciente->cadastrar();
@@ -19,5 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $_SESSION['error_message'] = "Erro: Todos os campos são obrigatórios.";
     }
+    header('Location: /clinic_management/views/adminPatientsView.php');
+    exit;
 }
-// Não há redirecionamento nem exit aqui!
