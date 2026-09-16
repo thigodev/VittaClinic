@@ -50,16 +50,3 @@ Para listar todos os contêineres, incluindo os parados, utilize:
 ```bash
 docker ps -a
 ```
-
----
-
-## Como Contribuir
-
-Quer ajudar a melhorar o VittaClinic? Contribuições são sempre bem-vindas!  
-Você pode:  
-- Abrir issues com sugestões ou problemas encontrados.  
-- Enviar pull requests com melhorias ou correções.  
-
----
-
-Agradecemos pelo interesse de quem quiser colaborar com o projeto! 🎉
